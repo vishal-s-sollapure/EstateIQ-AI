@@ -2,84 +2,66 @@
 EstateIQ AI - Phase 2: Exploratory Data Analysis (EDA)
 Section 1: Ingestion & Structural Inspection
 Section 2: Missing Values, Duplicates & Statistical Summaries
+Section 3: Suspicious Values & Deep-Dive Anomaly Audit
 """
 
 from pathlib import Path
+import re
 import pandas as pd
 
 # Clean display settings
 pd.set_option("display.max_columns", None)
 pd.set_option("display.width", 1000)
 
-# Resolve path relative to project root
 project_root = Path(__file__).resolve().parent.parent
 data_path = project_root / "data" / "raw" / "Bengaluru_House_Data.csv"
 
-print("=" * 70)
-print("🏢 EstateIQ AI — Phase 2: EDA Dataset Audit")
-print("=" * 70)
-
 df = pd.read_csv(data_path)
 
-# ----------------------------------------------------------------------
-# SECTION 1: SHAPE & STRUCTURAL OVERVIEW
-# ----------------------------------------------------------------------
-print("\n" + "=" * 70)
-print("SECTION 1: DATASET DIMENSIONS & COLUMNS")
+# ======================================================================
+# SECTION 3: SUSPICIOUS VALUES & DEEP-DIVE ANOMALY AUDIT
+# ======================================================================
 print("=" * 70)
-print(f"Total Rows (Listings)   : {df.shape[0]:,}")
-print(f"Total Columns (Features): {df.shape[1]}")
-print(f"\nColumn Names:\n{list(df.columns)}")
+print("SECTION 3: SUSPICIOUS VALUES & DEEP-DIVE ANOMALIES")
+print("=" * 70)
 
-# ----------------------------------------------------------------------
-# SECTION 2: MISSING VALUE ANALYSIS
-# ----------------------------------------------------------------------
-print("\n" + "=" * 70)
-print("SECTION 2.1: MISSING VALUE BREAKDOWN")
-print("=" * 70)
-null_counts = df.isnull().sum()
-null_pct = (null_counts / len(df)) * 100
-missing_df = pd.DataFrame({
-    "Data Type": df.dtypes,
-    "Non-Null Count": df.notnull().sum(),
-    "Null Count": null_counts,
-    "Null %": null_pct.round(2)
-})
-# Sort descending by null count to spotlight problem columns
-print(missing_df.sort_values(by="Null Count", ascending=False).to_string())
+# 1. Investigate non-numeric 'total_sqft' values
+def is_float(val):
+    try:
+        float(val)
+        return True
+    except (ValueError, TypeError):
+        return False
 
-# ----------------------------------------------------------------------
-# SECTION 2.2: DUPLICATE ROW AUDIT
-# ----------------------------------------------------------------------
-print("\n" + "=" * 70)
-print("SECTION 2.2: DUPLICATE RECORDS AUDIT")
-print("=" * 70)
-num_duplicates = df.duplicated().sum()
-dup_pct = (num_duplicates / len(df)) * 100
-print(f"Duplicate Rows Identified : {num_duplicates:,} ({dup_pct:.2f}% of total data)")
-if num_duplicates > 0:
-    print("Interpretation: 529 identical records exist in the raw dataset. In real estate,")
-    print("scraped listings are frequently duplicated by multiple broker agencies.")
+non_numeric_sqft = df[~df["total_sqft"].apply(is_float)]
+print(f"\n1. Non-Numeric 'total_sqft' Values Identified: {len(non_numeric_sqft)} records")
+print("Sample Non-Numeric Patterns in total_sqft:")
+print(non_numeric_sqft[["total_sqft", "size", "price"]].head(10))
 
-# ----------------------------------------------------------------------
-# SECTION 2.3: NUMERICAL STATISTICAL SUMMARY
-# ----------------------------------------------------------------------
-print("\n" + "=" * 70)
-print("SECTION 2.3: NUMERICAL FEATURES SUMMARY (df.describe())")
-print("=" * 70)
-num_summary = df.describe().round(2)
-print(num_summary)
+# 2. Extract integer BHK to inspect bedroom anomalies
+df_size_clean = df.dropna(subset=["size"]).copy()
+df_size_clean["bhk"] = df_size_clean["size"].apply(lambda x: int(str(x).split()[0]))
 
-# ----------------------------------------------------------------------
-# SECTION 2.4: CATEGORICAL FEATURES SUMMARY
-# ----------------------------------------------------------------------
-print("\n" + "=" * 70)
-print("SECTION 2.4: CATEGORICAL FEATURES SUMMARY")
-print("=" * 70)
-cat_cols = df.select_dtypes(include=["object", "str"]).columns
-cat_summary = df[cat_cols].describe()
-print(cat_summary)
+print("\n" + "-" * 70)
+print(f"2. Extreme 'bhk' (Bedroom) Counts:")
+print(f"BHK Distribution Summary:\n{df_size_clean['bhk'].value_counts().sort_index().tail(10)}")
+extreme_bhk = df_size_clean[df_size_clean["bhk"] > 10]
+print(f"\nListings with > 10 Bedrooms ({len(extreme_bhk)} records):")
+print(extreme_bhk[["location", "size", "bhk", "total_sqft", "bath", "price"]])
+
+# 3. Investigate extreme bathroom counts
+print("\n" + "-" * 70)
+print("3. Extreme Bathroom Counts (bath > 10):")
+extreme_bath = df[df["bath"] > 10]
+print(f"Listings with > 10 Bathrooms ({len(extreme_bath)} records):")
+print(extreme_bath[["location", "size", "total_sqft", "bath", "price"]])
+
+# 4. Investigate Bathroom-to-BHK discrepancy
+bath_bhk_mismatch = df_size_clean[df_size_clean["bath"] > (df_size_clean["bhk"] + 2)]
+print("\n" + "-" * 70)
+print(f"4. Severe Bathroom Discrepancy (bath > bhk + 2): {len(bath_bhk_mismatch)} records")
+print(bath_bhk_mismatch[["location", "size", "bhk", "bath", "price"]].head(5))
 
 print("\n" + "=" * 70)
-print("Audit Section 1 & 2 Execution Complete!")
+print("Section 3 Anomaly Audit Complete!")
 print("=" * 70)
