@@ -5,7 +5,13 @@ Generates target price distribution and log-transformation diagnostics.
 Saves high-resolution figures to 'reports/figures/'.
 """
 
+import os
+import tempfile
 from pathlib import Path
+
+# Set Matplotlib cache directory to temporary directory
+os.environ["MPLCONFIGDIR"] = tempfile.gettempdir()
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -65,7 +71,7 @@ plt.tight_layout()
 # 4. Save High-Resolution Plot
 save_path = figures_dir / "01_price_distribution.png"
 plt.savefig(save_path, dpi=300, bbox_inches="tight")
-print(f"✅ Figure saved to: {save_path}")
+print(f"✅ Figure successfully saved to: {save_path}")
 
 print("-" * 70)
 print(f"Raw Price Skewness        : {raw_skew:.2f} (Extremely Right-Skewed)")
@@ -74,4 +80,3 @@ print("-" * 70)
 
 # Display interactive plot window
 plt.show()
-
