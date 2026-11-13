@@ -3,6 +3,7 @@ EstateIQ AI - Visual Exploratory Data Analysis (EDA)
 ----------------------------------------------------
 Section 1: Target Price Distribution & Log-Transformation Diagnostics (Saved: 01_price_distribution.png)
 Section 2: BHK Box Plots & Area vs Price Scatter Analysis (Saved: 02_bhk_and_area_analysis.png)
+Section 3: Locality Comparison & Feature Correlation Heatmap (Saved: 03_locality_and_correlation.png)
 """
 
 import os
@@ -18,7 +19,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Visual formatting settings
-plt.rcParams["figure.figsize"] = (15, 6)
+plt.rcParams["figure.figsize"] = (16, 6)
 plt.rcParams["font.size"] = 11
 sns.set_theme(style="whitegrid", palette="muted")
 
@@ -29,16 +30,13 @@ figures_dir = project_root / "reports" / "figures"
 figures_dir.mkdir(parents=True, exist_ok=True)
 
 print("=" * 70)
-print("🏢 EstateIQ AI — Visual Exploratory Data Analysis")
+print("🏢 EstateIQ AI — Visual Exploratory Data Analysis: Section 3")
 print("=" * 70)
 print(f"Loading raw dataset from: {data_path}")
 
 df_raw = pd.read_csv(data_path)
-print(f"Dataset successfully loaded: {df_raw.shape[0]:,} listings across {df_raw.shape[1]} features\n")
 
-# ----------------------------------------------------------------------
-# HELPER: Temporary parser for plotting without modifying df_raw
-# ----------------------------------------------------------------------
+# Helper: parse sqft safely
 def parse_sqft(val):
     tokens = str(val).split("-")
     if len(tokens) == 2:
@@ -51,67 +49,64 @@ def parse_sqft(val):
     except ValueError:
         return np.nan
 
-# Construct temporary diagnostic dataframe
 df_plot = df_raw.copy()
 df_plot["clean_sqft"] = df_plot["total_sqft"].apply(parse_sqft)
 df_plot["bhk"] = df_plot["size"].dropna().apply(lambda x: int(str(x).split()[0]))
 df_plot["price_per_sqft"] = (df_plot["price"] * 100000) / df_plot["clean_sqft"]
+df_plot["clean_location"] = df_plot["location"].astype(str).str.strip()
 
 # ----------------------------------------------------------------------
-# FIGURE 2: BHK vs Price-Per-Sqft & Area vs Price Scaling
+# FIGURE 3: Locality Price Comparison & Correlation Matrix
 # ----------------------------------------------------------------------
 fig, axes = plt.subplots(1, 2, figsize=(16, 6))
 
-# Filter to common residential BHKs (1 to 6) and clip extreme visualization outliers for clean display
-common_bhk = df_plot[(df_plot["bhk"] >= 1) & (df_plot["bhk"] <= 6) & (df_plot["price_per_sqft"] <= 25000)]
+# Subplot 1: Top 10 High-Volume Localities Comparison (Median Price/SqFt)
+top_locations = df_plot["clean_location"].value_counts().head(10).index
+loc_df = df_plot[df_plot["clean_location"].isin(top_locations)]
+loc_stats = loc_df.groupby("clean_location")["price_per_sqft"].median().sort_values(ascending=True)
 
-# Subplot 1: Box Plot of Price per Sq Ft across BHK
-sns.boxplot(
-    data=common_bhk,
-    x="bhk",
-    y="price_per_sqft",
-    palette="Blues",
-    ax=axes[0],
-    showmeans=True,
-    meanprops={"marker": "o", "markerfacecolor": "red", "markeredgecolor": "red"}
+colors = sns.color_palette("viridis", len(loc_stats))
+bars = axes[0].barh(loc_stats.index, loc_stats.values, color=colors, edgecolor="black", height=0.6)
+axes[0].set_title("Median Price per Sq. Ft. in Top 10 Most Listed Localities", fontsize=13, fontweight="bold")
+axes[0].set_xlabel("Median Price per Sq. Ft. (₹/sq ft)")
+axes[0].set_ylabel("Bengaluru Neighborhood")
+
+# Add data labels onto bars
+for bar in bars:
+    w = bar.get_width()
+    axes[0].text(w + 100, bar.get_y() + bar.get_height() / 2, f"₹{w:,.0f}", va="center", fontsize=10, fontweight="bold")
+
+axes[0].set_xlim(0, max(loc_stats.values) * 1.2)
+
+# Subplot 2: Correlation Heatmap for Numerical Features
+num_cols = ["price", "clean_sqft", "bhk", "bath", "balcony"]
+corr_matrix = df_plot[num_cols].corr()
+
+sns.heatmap(
+    corr_matrix,
+    annot=True,
+    fmt=".2f",
+    cmap="Blues",
+    cbar=True,
+    linewidths=1,
+    square=True,
+    ax=axes[1],
+    annot_kws={"size": 11, "weight": "bold"}
 )
-axes[0].set_title("Price per Sq. Ft. across BHK Categories (1 to 6 BHK)", fontsize=13, fontweight="bold")
-axes[0].set_xlabel("Number of Bedrooms (BHK)")
-axes[0].set_ylabel("Price per Sq. Ft. (₹/sq ft)")
-axes[0].axhline(common_bhk["price_per_sqft"].median(), color="green", linestyle="--", label=f"Overall Median: ₹{common_bhk['price_per_sqft'].median():.0f}/sqft")
-axes[0].legend(loc="upper right")
+axes[1].set_title("Correlation Heatmap of Key Numerical Features", fontsize=13, fontweight="bold")
 
-# Subplot 2: Scatter Plot of Total Sqft vs Price (colored by BHK)
-scatter_sample = common_bhk[(common_bhk["clean_sqft"] <= 6000) & (common_bhk["price"] <= 800)]
-scatter = axes[1].scatter(
-    scatter_sample["clean_sqft"],
-    scatter_sample["price"],
-    c=scatter_sample["bhk"],
-    cmap="viridis",
-    alpha=0.6,
-    edgecolors="none",
-    s=30
-)
-cbar = plt.colorbar(scatter, ax=axes[1])
-cbar.set_label("BHK Configuration", rotation=270, labelpad=15)
-axes[1].set_title("Property Area (sq. ft.) vs. Price (₹ Lakhs)", fontsize=13, fontweight="bold")
-axes[1].set_xlabel("Total Area (sq. ft.)")
-axes[1].set_ylabel("Price in Lakhs (₹)")
-
-plt.suptitle("EstateIQ AI — Physical Feature Scaling & Unit Economics", fontsize=15, fontweight="bold", y=1.02)
+plt.suptitle("EstateIQ AI — Spatial Locality Variance & Feature Correlations", fontsize=15, fontweight="bold", y=1.02)
 plt.tight_layout()
 
 # Save figure
-save_path2 = figures_dir / "02_bhk_and_area_analysis.png"
-plt.savefig(save_path2, dpi=300, bbox_inches="tight")
-print(f"✅ Figure 2 successfully saved to: {save_path2}")
+save_path3 = figures_dir / "03_locality_and_correlation.png"
+plt.savefig(save_path3, dpi=300, bbox_inches="tight")
+print(f"✅ Figure 3 successfully saved to: {save_path3}")
 
-# Display median price per sqft per BHK
 print("\n" + "-" * 70)
-print("MEDIAN PRICE PER SQFT BY BHK CATEGORY:")
+print("PEARSON CORRELATION MATRIX:")
 print("-" * 70)
-bhk_stats = common_bhk.groupby("bhk")["price_per_sqft"].agg(["count", "median", "mean"]).round(1)
-print(bhk_stats)
+print(corr_matrix.round(3))
 print("-" * 70)
 
 # Display interactive plot window
