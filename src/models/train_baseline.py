@@ -206,7 +206,17 @@ def generate_performance_plots(y_true, y_pred, model_name, save_path):
     logger.info(f"Saved performance plot to: {save_path}")
 
 
+def format_df_as_markdown(df):
+    headers = list(df.columns)
+    lines = ["| " + " | ".join(headers) + " |"]
+    lines.append("| " + " | ".join(["---"] * len(headers)) + " |")
+    for _, row in df.iterrows():
+        lines.append("| " + " | ".join(str(val) for val in row.values) + " |")
+    return "\n".join(lines)
+
+
 def generate_benchmark_report(report_path, results_df, best_name, best_pkg):
+    markdown_table = format_df_as_markdown(results_df)
     content = f"""# EstateIQ AI — Baseline Regression Models Benchmark Report
 **Document ID:** ML-BNCH-001  
 **Project:** EstateIQ AI — Phase 4: Baseline Modeling & Evaluation  
@@ -229,7 +239,7 @@ The best-performing baseline model is **{best_name}**, achieving an out-of-sampl
 
 ## 2. Model Performance Benchmark Comparison Table
 
-{results_df.to_markdown(index=False)}
+{markdown_table}
 
 ---
 
