@@ -245,7 +245,11 @@ def generate_shap_report(
         lines.append(f"| {row['Rank']} | {row['Feature']} | {row['Mean |SHAP| (log units)']:.4f} |")
     table_md = "\n".join(lines)
 
-    content = f"""# EstateIQ AI — Explainable AI (SHAP) Interpretation Report
+    pred_log = float(np.log1p(sample['predicted_price']))
+    top_feature_name = str(df_top_features.iloc[0]['Feature'])
+    top_feature_shap = float(df_top_features.iloc[0]['Mean |SHAP| (log units)'])
+
+    template = r"""# EstateIQ AI — Explainable AI (SHAP) Interpretation Report
 **Document ID:** ML-XAI-001  
 **Project:** EstateIQ AI — Phase 5: Explainable AI & Model Governance  
 **Date:** November 2026  
@@ -269,12 +273,12 @@ To explain the internal decision logic of the 300 gradient boosted trees, we uti
 ### Model Output Scale & Additivity Formulation
 Because the underlying XGBoost model was trained using a log-target transformation ($\log(1 + y)$), **all SHAP values are expressed strictly in $\log(1 + \text{price})$ model-margin units**:
 
-$$\\log(1 + \\hat{{y}}) = E[\\log(1 + y)] + \\sum_{{i=1}}^M \\phi_i(x)$$
+$$\log(1 + \hat{y}) = E[\log(1 + y)] + \sum_{i=1}^M \phi_i(x)$$
 
 Where:
-- $E[\log(1 + y)] = {base_val:.4f}$ is the **Base Value (Expected Model Output)** across the training distribution. Converting this to original units yields $\exp({base_val:.4f}) - 1 \approx \mathbf{{₹{base_price_lakhs:.2f}\text{ Lakhs}}}$ as the baseline starting appraisal for a typical property in metropolitan Bengaluru.
+- $E[\log(1 + y)] = __BASE_VAL__$ is the **Base Value (Expected Model Output)** across the training distribution. Converting this to original units yields $\exp(__BASE_VAL__) - 1 \approx \mathbf{₹__BASE_PRICE__\text{ Lakhs}}$ as the baseline starting appraisal for a typical property in metropolitan Bengaluru.
 - $\phi_i(x)$ represents the marginal additive push of feature $i$ on the log price scale.
-- **Numerical Additivity Verification**: Confirmed across all 2,251 test listings. The maximum numerical discrepancy between $\log(1 + \hat{y})$ and $\text{base\_value} + \sum \phi_i(x)$ is **{additivity_error:.2e}**, proving exact additivity.
+- **Numerical Additivity Verification**: Confirmed across all 2,251 test listings. The maximum numerical discrepancy between $\log(1 + \hat{y})$ and $\text{base\_value} + \sum \phi_i(x)$ is **__ADDITIVITY_ERR__**, proving exact additivity.
 
 > [!WARNING]
 > **Proper Economic Interpretation**: Individual SHAP values represent model output margin adjustments, **not direct linear ₹ contributions**. An attribution of $\phi_i = +0.20$ is not "₹20 Lakhs", but an adjustment on the log scale. Furthermore, SHAP values reflect the associational behavior of this specific tree ensemble on historical data and **must not be interpreted as independently proven causal price elasticities**.
@@ -283,13 +287,13 @@ Where:
 
 ## 2. Global Feature Importance & Behavioral Dynamics
 
-The table below ranks the top 15 features across all 242 encoded dimensions by **Mean Absolute SHAP value** ($\frac{{1}}{{N}} \sum |\phi_i|$):
+The table below ranks the top 15 features across all 242 encoded dimensions by **Mean Absolute SHAP value** ($\frac{1}{N} \sum |\phi_i|$):
 
-{table_md}
+__TABLE_MD__
 
 ### Key Behavioral Observations:
-1. **Physical Scale Dominance (`total_sqft`):**
-   - Ranks as the #1 globally influential driver of property value (Mean $|\text{{SHAP}}| = {df_top_features.iloc[0]['Mean |SHAP| (log units)']:.4f}$).
+1. **Physical Scale Dominance (`__TOP_FEATURE__`):**
+   - Ranks as the #1 globally influential driver of property value (Mean $|\text{SHAP}| = __TOP_SHAP__).
    - As seen in the Beeswarm Plot ([`06_shap_summary.png`](file:///c:/Users/VISHAL/OneDrive/Desktop/EstateIQ-AI/reports/figures/06_shap_summary.png)), higher square footage (red dots) consistently drives positive SHAP attributions, whereas sub-1,000 sq ft properties (blue dots) push valuations downward.
 2. **Layout & Luxury Indicator (`bath` & `bhk`):**
    - Bathrooms (`bath`) rank #2 globally, outranking bedroom count (`bhk`). In modern Bengaluru residential architecture, bathroom count acts as a stronger proxy for luxury layout tier, ensuite amenities, and unit spaciousness than raw bedroom partition count.
@@ -304,21 +308,21 @@ The table below ranks the top 15 features across all 242 encoded dimensions by *
 
 To illustrate how EstateIQ AI decomposes an individual appraisal, we selected a representative test listing deterministically:
 - **Selection Criterion**: Held-out test property closest to the median asking price (₹70.00 Lakhs) with minimum absolute prediction error.
-- **Selected Listing (Test Index {sample_idx}):**
-  - **Location**: {sample['location']}
-  - **Property Area**: {sample['total_sqft']} sq. ft.
-  - **Configuration**: {sample['bhk']} BHK, {sample['bath']} Bathrooms, {sample['balcony']} Balconies
-  - **Area Type**: {sample['area_type']}
-  - **Actual Asking Price**: **₹{sample['actual_price']:.2f} Lakhs**
-  - **Model Predicted Valuation**: **₹{sample['predicted_price']:.2f} Lakhs**
-  - **Absolute Error**: ₹{sample['abs_error']:.2f} Lakhs ($0.3\%$ relative error)
+- **Selected Listing (Test Index __SAMPLE_IDX__):**
+  - **Location**: __SAMPLE_LOC__
+  - **Property Area**: __SAMPLE_SQFT__ sq. ft.
+  - **Configuration**: __SAMPLE_BHK__ BHK, __SAMPLE_BATH__ Bathrooms, __SAMPLE_BALCONY__ Balconies
+  - **Area Type**: __SAMPLE_TYPE__
+  - **Actual Asking Price**: **₹__SAMPLE_ACTUAL__ Lakhs**
+  - **Model Predicted Valuation**: **₹__SAMPLE_PRED__ Lakhs**
+  - **Absolute Error**: ₹__SAMPLE_ERR__ Lakhs (0.3% relative error)
 
 ### Waterfall Breakdown ([`08_shap_waterfall.png`](file:///c:/Users/VISHAL/OneDrive/Desktop/EstateIQ-AI/reports/figures/08_shap_waterfall.png))
-- **Starting Base Value**: $E[f(X)] = {base_val:.2f}$ (Baseline market log price $\approx$ ₹{base_price_lakhs:.1f} Lakhs).
-- **Positive Area Push**: $+0.21$ log units driven by spacious area ({sample['total_sqft']} sq ft).
+- **Starting Base Value**: $E[f(X)] = __BASE_VAL__$ (Baseline market log price $\approx$ ₹__BASE_PRICE__ Lakhs).
+- **Positive Area Push**: $+0.21$ log units driven by spacious area (__SAMPLE_SQFT__ sq ft).
 - **Positive Bathroom Push**: $+0.08$ log units driven by 3 bathrooms.
 - **Negative Locality Adjustment**: Modest downward adjustment from the baseline market mean reflecting suburban Hoodi pricing relative to high-end central districts.
-- **Final Model Output**: $f(x) = {np.log1p(sample['predicted_price']):.2f} \implies \exp({np.log1p(sample['predicted_price']):.2f}) - 1 = \mathbf{{₹{sample['predicted_price']:.2f}\text{ Lakhs}}}$.
+- **Final Model Output**: $f(x) = __PRED_LOG__ \implies \exp(__PRED_LOG__) - 1 = \mathbf{₹__SAMPLE_PRED__\text{ Lakhs}}$.
 
 ---
 
@@ -339,8 +343,33 @@ In [`reports/figures/09_shap_dependence_sqft.png`](file:///c:/Users/VISHAL/OneDr
 3. **Scope of Application**:
    The model is strictly calibrated for residential properties in metropolitan Bengaluru within the observed boundary ranges ($300 - 15,000$ sq ft, $1 - 16$ BHK). Predictions and SHAP explanations for commercial properties or rural land are invalid.
 """
+
+    rendered = template
+    rendered = rendered.replace("__BASE_VAL__", f"{base_val:.4f}")
+    rendered = rendered.replace("__BASE_PRICE__", f"{base_price_lakhs:.2f}")
+    rendered = rendered.replace("__ADDITIVITY_ERR__", f"{additivity_error:.2e}")
+    rendered = rendered.replace("__TABLE_MD__", table_md)
+    rendered = rendered.replace("__TOP_FEATURE__", top_feature_name)
+    rendered = rendered.replace("__TOP_SHAP__", f"{top_feature_shap:.4f}")
+    rendered = rendered.replace("__SAMPLE_IDX__", str(sample_idx))
+    rendered = rendered.replace("__SAMPLE_LOC__", str(sample['location']))
+    rendered = rendered.replace("__SAMPLE_SQFT__", str(sample['total_sqft']))
+    rendered = rendered.replace("__SAMPLE_BHK__", str(sample['bhk']))
+    rendered = rendered.replace("__SAMPLE_BATH__", str(sample['bath']))
+    rendered = rendered.replace("__SAMPLE_BALCONY__", str(sample['balcony']))
+    rendered = rendered.replace("__SAMPLE_TYPE__", str(sample['area_type']))
+    rendered = rendered.replace("__SAMPLE_ACTUAL__", f"{sample['actual_price']:.2f}")
+    rendered = rendered.replace("__SAMPLE_PRED__", f"{sample['predicted_price']:.2f}")
+    rendered = rendered.replace("__SAMPLE_ERR__", f"{sample['abs_error']:.2f}")
+    rendered = rendered.replace("__PRED_LOG__", f"{pred_log:.2f}")
+
     with open(report_path, "w", encoding="utf-8") as f:
-        f.write(content)
+        f.write(rendered)
+
+    with open(report_path, "w", encoding="utf-8") as f:
+        f.write(rendered)
+    with open(report_path, "w", encoding="utf-8") as f:
+        f.write(rendered)
 
 
 if __name__ == "__main__":
