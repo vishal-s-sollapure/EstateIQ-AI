@@ -127,7 +127,7 @@ def run_shap_analysis():
         top_features_summary.append({
             "Rank": rank,
             "Feature": cleaned_feature_names[idx],
-            "Mean |SHAP| (log units)": round(float(mean_abs_shap[idx]), 4)
+            "Mean Abs SHAP (log units)": round(float(mean_abs_shap[idx]), 4)
         })
     df_top_features = pd.DataFrame(top_features_summary)
 
@@ -242,7 +242,7 @@ def generate_shap_report(
     lines = ["| " + " | ".join(headers) + " |"]
     lines.append("| " + " | ".join([":---" if i == 1 else ":---:" for i in range(len(headers))]) + " |")
     for _, row in df_top_features.iterrows():
-        lines.append(f"| {row['Rank']} | {row['Feature']} | {row['Mean |SHAP| (log units)']:.4f} |")
+        lines.append(f"| {row['Rank']} | {row['Feature']} | {row['Mean Abs SHAP (log units)']:.4f} |")
     table_md = "\n".join(lines)
 
     pred_log = float(np.log1p(sample['predicted_price']))

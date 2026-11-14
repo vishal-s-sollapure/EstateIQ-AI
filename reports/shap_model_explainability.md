@@ -38,7 +38,7 @@ Where:
 
 The table below ranks the top 15 features across all 242 encoded dimensions by **Mean Absolute SHAP value** ($\frac{1}{N} \sum |\phi_i|$):
 
-| Rank | Feature | Mean |SHAP| (log units) |
+| Rank | Feature | Mean Abs SHAP (log units) |
 | :---: | :--- | :---: |
 | 1 | total_sqft | 0.3810 |
 | 2 | Loc: Giri Nagar | 0.2909 |
