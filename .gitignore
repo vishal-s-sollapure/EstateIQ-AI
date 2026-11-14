@@ -48,6 +48,7 @@ data/processed/*
 models/*
 !models/.gitkeep
 *.pkl
+catboost_info/
 *.joblib
 *.h5
 *.pt

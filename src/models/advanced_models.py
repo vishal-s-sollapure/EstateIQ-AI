@@ -237,8 +237,6 @@ def build_pipeline(
         params = {**LGBM_CONFIG, **c_params}
         if categorical_encoding.lower() == "ordinal":
             preprocessor = build_tree_preprocessor_ordinal()
-            # Indices 4 and 5 are location and area_type
-            params["categorical_feature"] = [4, 5]
         else:
             preprocessor = build_tree_preprocessor_ohe(sparse_output=True)
         regressor = LGBMRegressor(**params)
