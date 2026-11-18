@@ -131,6 +131,8 @@ class TestSHAPService(unittest.TestCase):
         self.assertEqual(study["location"], "Hoodi")
         self.assertEqual(study["actual_price_lakhs"], 75.00)
         self.assertEqual(study["predicted_price_lakhs"], 74.97)
+        self.assertIn("3379", study["listing_id"])
+        self.assertIn("Held-Out Test Set", study["dataset_source"])
 
 
 if __name__ == "__main__":

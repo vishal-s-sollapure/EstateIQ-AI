@@ -113,7 +113,7 @@ with st.sidebar:
             <div class="sidebar-card-title">🗺️ Geospatial Intelligence</div>
             <div class="sidebar-card-item"><strong>Recognized Localities:</strong> 234</div>
             <div class="sidebar-card-item"><strong>Geocoded Centroids:</strong> 211 (90.2%)</div>
-            <div class="sidebar-card-item"><strong>Metro Stations:</strong> 481 nodes</div>
+            <div class="sidebar-card-item"><strong>Transit / Metro Nodes:</strong> 481 (OSM stations, stops & entrances)</div>
             <div class="sidebar-card-item"><strong>Tech Parks:</strong> 130 hubs</div>
             <div class="sidebar-card-item"><strong>Hospitals:</strong> 1,161 centers</div>
             <div class="sidebar-card-item"><strong>Geodesic Engine:</strong> WGS84 Ellipsoid</div>

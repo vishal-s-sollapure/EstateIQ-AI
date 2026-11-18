@@ -52,6 +52,7 @@ def render_geospatial_explorer(location: str):
                 <div style="font-size: 0.85rem; color: #166534;">
                     <strong>{metro.get('name', 'N/A')}</strong><br/>
                     <span style="color: #4b5563;">OSM ID: {metro.get('osm_id', 'N/A')}</span>
+                    {f"<br/><span style='color: #047857; font-size: 0.75rem;'>* Geocoded directly to station reference node</span>" if metro.get('distance_km') == 0.0 else ""}
                 </div>
             </div>
             """,
