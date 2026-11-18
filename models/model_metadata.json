@@ -1,0 +1,70 @@
+{
+    "timestamp": "2026-11-14 12:23:13",
+    "champion_model": "XGBoost (Log Target)",
+    "input_features": {
+        "numerical": [
+            "total_sqft",
+            "bhk",
+            "bath",
+            "balcony"
+        ],
+        "categorical": [
+            "location",
+            "area_type"
+        ],
+        "total_features": 6
+    },
+    "target_variable": "price",
+    "target_units": "INR Lakhs (\u20b9 100,000)",
+    "train_size": 9001,
+    "test_size": 2251,
+    "champion_cv_metrics": {
+        "cv_mae_lakhs": 24.336167910801624,
+        "cv_rmse_lakhs": 59.80841117224122,
+        "cv_r2": 0.695203178122153,
+        "train_r2": 0.8084595936648696,
+        "overfit_gap": 0.11325641554271659
+    },
+    "champion_test_metrics": {
+        "test_mae_lakhs": 25.13,
+        "test_rmse_lakhs": 59.09,
+        "test_r2": 0.7667
+    },
+    "hyperparameters": {
+        "lightgbm": {
+            "n_estimators": 300,
+            "learning_rate": 0.05,
+            "num_leaves": 31,
+            "subsample": 0.8,
+            "subsample_freq": 1,
+            "colsample_bytree": 0.8,
+            "random_state": 42,
+            "n_jobs": -1,
+            "verbose": -1
+        },
+        "xgboost": {
+            "n_estimators": 300,
+            "learning_rate": 0.05,
+            "max_depth": 6,
+            "subsample": 0.8,
+            "colsample_bytree": 0.8,
+            "reg_alpha": 0.1,
+            "reg_lambda": 1.0,
+            "random_state": 42,
+            "n_jobs": -1
+        },
+        "catboost": {
+            "iterations": 300,
+            "learning_rate": 0.05,
+            "depth": 6,
+            "l2_leaf_reg": 3.0,
+            "random_seed": 42,
+            "verbose": 0
+        },
+        "random_forest": {
+            "n_estimators": 100,
+            "random_state": 42,
+            "n_jobs": -1
+        }
+    }
+}
