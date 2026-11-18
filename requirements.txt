@@ -24,6 +24,9 @@ xgboost>=2.0.0
 catboost>=1.2.0
 shap>=0.45.0
 
+# Phase 6 Geospatial Intelligence & Mapping
+geopy>=2.4.0
+
 # Interactive Web Application
 streamlit>=1.30.0
 
