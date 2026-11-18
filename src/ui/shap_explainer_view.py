@@ -59,10 +59,12 @@ def render_shap_explainer_view():
 
     # TAB 1: LOCAL CASE STUDY
     with shap_tab1:
-        st.markdown("### 📌 Local Case Study: Canonical 2 BHK in Hoodi")
-        st.markdown(
-            "To understand how the 300 gradient boosted trees synthesize property features into a final valuation, "
-            "we inspect a representative held-out test property closest to the Bengaluru market median asking price:"
+        st.markdown("### 📌 Local Case Study: Canonical 2 BHK in Hoodi (Held-Out Test Index 3379)")
+        st.info(
+            "📋 **Audit & Provenance Note**: This local attribution breakdown analyzes a verified property from the "
+            "**held-out test set** ($N = 2,251$, 20% partition), which was strictly sequestered during model training. "
+            "It serves as a deterministic, reproducible benchmark case study and does not dynamically recompute SHAP "
+            "for custom user inputs in Tab 1."
         )
 
         study = get_canonical_case_study()
@@ -74,19 +76,19 @@ def render_shap_explainer_view():
         with c_cols[1]:
             st.metric("Built-up Area", f"{study['total_sqft']} sq. ft.")
         with c_cols[2]:
-            st.metric("Actual Price", f"₹{study['actual_price_lakhs']:.2f} L")
+            st.metric("Actual Asking Price", f"₹{study['actual_price_lakhs']:.2f} L")
         with c_cols[3]:
             st.metric(
                 "Predicted Valuation",
                 f"₹{study['predicted_price_lakhs']:.2f} L",
-                delta=f"Diff: ₹{study['absolute_error_lakhs']:.2f} L (0.04%)"
+                delta=f"Abs Error: ₹{study['absolute_error_lakhs']:.2f} L (0.04%)"
             )
 
         col_img, col_desc = st.columns([1.4, 1])
 
         with col_img:
             if figures["waterfall"].exists():
-                st.image(str(figures["waterfall"]), caption="Figure 08: SHAP Waterfall Plot for Test Index 3456 (Hoodi)", use_container_width=True)
+                st.image(str(figures["waterfall"]), caption="Figure 08: SHAP Waterfall Plot for Canonical Held-Out Test Listing (Index 3379, Hoodi)", use_container_width=True)
             else:
                 st.error("Waterfall figure not found.")
 
