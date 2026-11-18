@@ -59,11 +59,12 @@ To ensure modularity, separation of concerns, and instant sub-second rendering, 
 ### A. Model Inference Service (`src/services/model_service.py`)
 - **Cached Loading:** Utilizes `@st.cache_resource` to keep the serialized XGBoost pipeline in memory across sessions.
 - **Inference Latency:** Single property appraisal executes in $< 10\text{ ms}$.
-- **Tiered Confidence Bands:** Automatically assigns empirical prediction confidence intervals based on the Phase 5 residual standard deviation:
+- **Historical Residual-Scale Estimates:** Automatically assigns empirical dispersion margins based on historical held-out test set MAE across four price brackets (binned on actual price during benchmarking, conditioned on predicted price at inference):
   - Budget Tier ($< ₹50\text{ Lakhs}$): $\text{MAE} = \pm ₹8.55\text{ Lakhs}$
   - Mid-Market Tier ($₹50 - ₹100\text{ Lakhs}$): $\text{MAE} = \pm ₹13.24\text{ Lakhs}$
   - Upper-Mid Tier ($₹100 - ₹200\text{ Lakhs}$): $\text{MAE} = \pm ₹30.75\text{ Lakhs}$
   - Luxury Tier ($> ₹200\text{ Lakhs}$): $\text{MAE} = \pm ₹112.79\text{ Lakhs}$
+  *(Note: Labeled strictly as 'Historical Residual-Scale Estimate' to distinguish empirical MAE dispersion from calibrated statistical prediction intervals).*
 - **Dual Scale Output:** Computes primary and secondary formatted currency strings (`₹1.25 Cr` alongside `₹125.00 Lakhs`) and square-foot rate (`₹/sq.ft.`).
 
 ### B. Geospatial Intelligence Service (`src/services/geo_service.py`)
@@ -79,7 +80,7 @@ To ensure modularity, separation of concerns, and instant sub-second rendering, 
 
 ### C. Explainable AI Service (`src/services/shap_service.py`)
 - **Metadata Cache:** Provides structured rankings for the top 15 global features across 242 encoded dimensions.
-- **Canonical Case Study:** Exposes ground truth and step-by-step waterfall attributions for the canonical Hoodi 2 BHK listing (Actual ₹75.00L, Predicted ₹74.97L).
+- **Canonical Case Study:** Exposes ground truth and step-by-step waterfall attributions for the canonical Hoodi 2 BHK listing (Held-Out Test Index 3379: Actual ₹75.00L, Predicted ₹74.97L).
 - **Asset Resolution:** Resolves file paths to precomputed high-resolution diagnostic figures.
 
 ---
