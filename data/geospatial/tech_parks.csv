@@ -1,0 +1,131 @@
+poi_category,osm_id,osm_type,name,latitude,longitude,primary_tag,source,extraction_timestamp
+technology_park,251104654,node,SAP ITPL,12.9775585,77.7150021,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,343324577,node,Bagmane Tech Park,12.9807706,77.6563527,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,663941136,node,Bird and Rabbit park,12.9770068,77.5969363,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,825453261,node,ITPL,12.9874754,77.7360728,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,825453269,node,GR Tech Park,12.986516,77.7448169,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1098024028,node,I Gate ITPL Road,12.9773007,77.7192566,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1377780641,node,Kalyani Platina Tech Park Phase 2 Entrance,12.9713636,77.7174479,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1382528617,node,ITPL Back Gate,12.9862452,77.731685,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,2463850786,node,Manyata Embassy Business Park,13.0413528,77.621671,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,2477322389,node,SJR Park ITPL,12.9805104,77.7272748,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,3671350512,node,Pritech Park,12.9242813,77.6811116,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,7216699836,node,Manyatha Tech Park,13.040877,77.6183731,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,11832800839,node,Tech Park,12.9678875,77.7186913,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,13437492260,node,UPAR Hotels Near Bagmane Tech Park - Indiranagar,12.9769092,77.6539039,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,26399625,way,GR Salarpuria Tech Park,12.9853202,77.7435314,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,28453683,way,Embassy GolfLinks Business Park,12.9497765,77.6435314,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,34121900,way,Manyata Tech Park,13.048355,77.6207059,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,83231745,way,Bhoruka Tech Park,12.9940375,77.7054691,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,86310221,way,B.S.A. Tech Park,12.9807805,77.7143203,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,122668437,way,Mfar Silverline Tech Park,12.9740607,77.7207949,office,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,122668438,way,Prestige Featherlite Tech Park,12.9814693,77.7212459,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,122668456,way,Microchip Tech Park,12.9820237,77.7212935,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,122701299,way,Nethra Tech Park,12.9734362,77.7208188,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,123168401,way,G. R. Tech Park Road,12.9856017,77.742134,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,131609429,way,Oracle Technology Park,12.9342944,77.6022188,it,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,145130697,way,HM Tech Park,12.9830298,77.7511495,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,150212366,way,BMTC Depot 18 (ITPL),12.9771938,77.7262126,industrial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,157265782,way,Bengaluru IT Park,13.1613021,77.7131185,industrial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,159980947,way,Zepto HQ-Bharat IT Park,12.9166623,77.6713465,company,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,170320607,way,HCL Technologies SEZ,12.7877928,77.6515801,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,179321519,way,Embassy East Business Park (u/c),12.9915375,77.7384592,construction,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,181455079,way,Shailendra Tech Park,12.9784425,77.7254081,office,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,181544627,way,Skora Tech Park,12.9792881,77.7243702,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,217566879,way,Fairway Business Park,12.9519251,77.6423475,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,230424760,way,AMR Tech Park Road,12.8991556,77.6312075,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,231339924,way,Wipro SEZ Car Parking,12.8384513,77.6532165,parking,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,231354813,way,Software Technology Parks of India,12.8387622,77.6635722,industrial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,232972967,way,Cessna Business Park,12.9345429,77.6945078,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,233001388,way,Prestige Tech Park,12.9422614,77.6928369,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,264102930,way,Prathik Tech Park,12.8400518,77.6644813,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,265565391,way,Kirloskar Business Park,13.0516461,77.59491,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,347243838,way,Knowledge Square IT Park,12.9705179,77.7170038,company,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,347475248,way,Aloft Bengaluru Cessna Business Park,12.9370136,77.6951215,yes,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,348659340,way,Divyashri Tech Park Office,12.9711126,77.7245961,yes,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,349654005,way,AMR Tech Park,12.8991593,77.6309555,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,360342802,way,Sigma Soft Tech Park,12.9577112,77.744257,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,383645142,way,Global Technology Park Tower A,12.9270798,77.6827842,yes,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,383645143,way,Global Technology Park Tower B,12.9264169,77.6828667,yes,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,383645144,way,Global Technology Park Tower C,12.9256325,77.6829738,yes,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,414833842,way,Gayatri Tech Park,12.9728381,77.7200602,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,414833843,way,Kalyani Tech Park,12.9699135,77.7173293,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,450537541,way,Global Technology Park,12.9256684,77.6826976,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,460960666,way,RGA Tech Park,12.9013353,77.7047386,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,532166932,way,Global Tech Park,12.9620572,77.5994998,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,552246649,way,RGA Tech Park road,12.9023663,77.7057499,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,635317794,way,Wipro SEZ,12.8968842,77.712249,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,692956912,way,Global technology Park Tower Road,12.9234148,77.6831816,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,732010480,way,Bagmane Constellation Business Park,12.9813103,77.6977356,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,732317816,way,Gardencity IT Park,13.0635192,77.5947283,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,760685450,way,North Gate Business Park - Phase 3,13.11712,77.6063108,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,775230098,way,Karle SEZ,13.0439834,77.6168145,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,777618526,way,MS Ramaiah Tech Park,13.0421104,77.6235201,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,779344670,way,Enzyme Tech Park,12.9304997,77.6151243,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,779346494,way,Helios Business Park,12.9374508,77.6893324,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,781538804,way,RNS Business Park (u/c),13.0307414,77.5410759,construction,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,781588921,way,Rajajinagar IT Park,12.9779311,77.5508471,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,782063731,way,Hilton Bengaluru Embassy Manyata Business Park,13.0424779,77.6206056,hotel,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,782063732,way,Hilton Garden Inn Bengaluru Embassy Manyata Business Park,13.0418354,77.6201145,hotel,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,782064420,way,Ebisu Tech Park (u/c),13.0423911,77.6182459,construction,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,790430696,way,Business Park,13.196202,77.6919163,construction,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,888606703,way,Bagmane Rio Business Park,12.9825934,77.6914829,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,963445870,way,L&T Tech Park Phase 1,13.0685423,77.5919573,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1002994429,way,ITPL Main Road,12.991288,77.7138092,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1041856519,way,BS Tech Park,12.9309866,77.6871427,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1060953964,way,Vikas Tech Park Substation,12.9307068,77.6967296,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1061038567,way,Krishna Tech Park,12.936175,77.6980717,office,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1070952252,way,Helix Biotech Park,12.8438305,77.6574686,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1070952274,way,360 Business Park,12.8434447,77.6560637,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1071061035,way,AKR Tech Park,12.8922208,77.6422759,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1079506852,way,North Gate Business Park - Phase 1,13.1153234,77.6058072,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1083400623,way,JBR Tech Park,12.9782865,77.7278184,office,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1084971894,way,Embassy Tech Park - Block 8,12.9304608,77.68873,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1084971895,way,Vaishnavi Tech Park,12.9199713,77.6716962,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1086044109,way,Novel Business Park,12.9513404,77.6080853,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1090888013,way,Salarpuriya Sattva South-Gate Tech Park,12.8409395,77.6771657,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1110808769,way,North Gate Business Park - Phase 2,13.1163566,77.6061392,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1119204877,way,Salarpuria Sattva Alexandria Tech Park,12.841443,77.6773895,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1135846612,way,Titanium Tech Park,12.9879871,77.746852,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1144296220,way,Prasad Technology Park,12.9760088,77.7258437,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1147646460,way,V K Tech Park,12.9723619,77.7209874,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1149670804,way,Subramanya Tech Park,12.9863282,77.7329666,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1151907045,way,Akshay Tech Park,12.979668,77.7243891,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1151907061,way,Salaruria Sattva Mindcomp Tech Park,12.9823039,77.7207388,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1152481905,way,Holiday Inn Express Bengaluru Whitefield ITPL,12.9863374,77.7325996,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1154800563,way,JP Tech Park,12.9772334,77.7284794,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1182700238,way,Jayalakshmi Tech Park,13.1574476,77.7123213,construction,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1196254917,way,Maruthi Concorde Tech Park,12.8503341,77.6699683,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1212370420,way,Shilpitha Tech Park,12.9312739,77.6853971,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1240046864,way,CapitaLand IT Park,13.0647624,77.5941738,construction,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1244633653,way,360 Business Park Road,12.8416752,77.6558134,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1257330721,way,Novel Tech Park,12.8915097,77.641278,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1257330725,way,Ozone Manay Technology Park,12.8914704,77.6375458,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1257432367,way,Allure Business Park (u/c),12.9725554,77.7034125,construction,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1262098000,way,"Composite Technology Park, RV TIFAC",12.9197751,77.4720347,industrial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1267672098,way,Hinduja Ecopolis SEZ,13.1258485,77.6165065,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1268343122,way,Infomart Tech Park,12.9359987,77.6212551,company,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1268933943,way,MJR Tech Park (u/c),12.8956198,77.7250247,construction,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1279894925,way,Kalyani Tech Park (u/c),13.1719857,77.7401309,construction,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1282760092,way,Manyata Tech Park Phase 2,13.0552261,77.6163147,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1302227114,way,Brigade Tech Park,12.9863725,77.739803,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1303625883,way,Rathi Legacy - Rohan Tech Park,12.9859815,77.7093255,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1338543702,way,Hosur IT Park,12.7614021,77.8442837,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1343502803,way,National Public School ITPL,13.0421754,77.7634317,education,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1363976036,way,Bagmane Tech Park Flyover,12.9792056,77.6647502,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1366161300,way,L&T Tech Park Phase 2 (u/c),13.0714966,77.592091,construction,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1468457603,way,Business Park 2 (u/c),13.1960286,77.6869822,construction,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1557898769,way,Aurbis Business Park,12.9300453,77.6867809,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,1573353107,way,Morado-Primus Business Park,12.8841757,77.5528295,construction,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,14439526,relation,Bus V-500CA: ITPL => Banashankri TTMC,12.9518682,77.6552777,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,14455658,relation,Bus V-500CA: Banashankri TTMC => ITPL,12.9521443,77.6550294,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,16177613,relation,MF-1G: ITPL Metro Station => ITPL Metro Station,12.977209,77.7536262,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,17101059,relation,North Gate Business Park,13.1163357,77.6063589,commercial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,17770374,relation,Bengaluru Signature Business Park,13.2141234,77.6943272,industrial,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,19568379,relation,ITPL Residential Block,12.9846561,77.7377652,apartments,OpenStreetMap Overpass API,2026-11-18T09:37:12.213595+00:00
+technology_park,900000002,curated_node,Electronic City Phase 1 IT Hub,12.8452,77.6602,major_it_corridor,Curated Bengaluru Major IT Corridor,2026-11-18T09:37:12.213595+00:00
+technology_park,900000003,curated_node,Electronic City Phase 2 IT Hub,12.8398,77.6854,major_it_corridor,Curated Bengaluru Major IT Corridor,2026-11-18T09:37:12.213595+00:00
+technology_park,900000005,curated_node,Embassy TechVillage (Outer Ring Road),12.9282,77.6933,major_it_corridor,Curated Bengaluru Major IT Corridor,2026-11-18T09:37:12.213595+00:00
+technology_park,900000006,curated_node,RMZ Ecospace (Bellandur),12.9238,77.6848,major_it_corridor,Curated Bengaluru Major IT Corridor,2026-11-18T09:37:12.213595+00:00
+technology_park,900000010,curated_node,Brigade Tech Gardens (Brookefield),12.9734,77.7185,major_it_corridor,Curated Bengaluru Major IT Corridor,2026-11-18T09:37:12.213595+00:00
+technology_park,900000011,curated_node,RMZ Infinity (Old Madras Road),12.9961,77.6617,major_it_corridor,Curated Bengaluru Major IT Corridor,2026-11-18T09:37:12.213595+00:00

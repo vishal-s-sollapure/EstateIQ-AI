@@ -1,0 +1,2611 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-18T09:35:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 251104654,
+      "lat": 12.9775585,
+      "lon": 77.7150021,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "lit": "no",
+        "loc_name": "WHITEFIELD",
+        "name": "SAP ITPL",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 343324577,
+      "lat": 12.9807706,
+      "lon": 77.6563527,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bagmane Tech Park",
+        "name:en": "Bagmane Tech Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 663941136,
+      "lat": 12.9770068,
+      "lon": 77.5969363,
+      "tags": {
+        "leisure": "park",
+        "name": "Bird and Rabbit park"
+      }
+    },
+    {
+      "type": "node",
+      "id": 825453261,
+      "lat": 12.9874754,
+      "lon": 77.7360728,
+      "tags": {
+        "alt_name": "ITPL Main Gate",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "ITPL",
+        "name:en": "ITPL",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "wheelchair": "limited"
+      }
+    },
+    {
+      "type": "node",
+      "id": 825453269,
+      "lat": 12.986516,
+      "lon": 77.7448169,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "departures_board": "realtime",
+        "highway": "bus_stop",
+        "name": "GR Tech Park",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1098024028,
+      "lat": 12.9773007,
+      "lon": 77.7192566,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "loc_name": "WHITEFIELD",
+        "name": "I Gate ITPL Road",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1127347248,
+      "lat": 12.9770273,
+      "lon": 77.7193814,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "loc_name": "WHITEFIELD",
+        "name": "I Gate ITPL Road",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1377780641,
+      "lat": 12.9713636,
+      "lon": 77.7174479,
+      "tags": {
+        "barrier": "gate",
+        "name": "Kalyani Platina Tech Park Phase 2 Entrance"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1382528617,
+      "lat": 12.9862452,
+      "lon": 77.731685,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "loc_name": "WHITEFIELD",
+        "name": "ITPL Back Gate",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1382528650,
+      "lat": 12.9864828,
+      "lon": 77.7315457,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "loc_name": "WHITEFIELD",
+        "name": "ITPL Back Gate",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2463850786,
+      "lat": 13.0413528,
+      "lon": 77.621671,
+      "tags": {
+        "alt_name": "Manyatha Tech Park",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "loc_name": "NAGAVARA",
+        "name": "Manyata Embassy Business Park",
+        "name:en": "Manyata Embassy Business Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2475474263,
+      "lat": 12.9877152,
+      "lon": 77.7369166,
+      "tags": {
+        "alt_name": "ITPL Main Gate",
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "no",
+        "highway": "bus_stop",
+        "name": "ITPL",
+        "name:en": "ITPL",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2477322389,
+      "lat": 12.9805104,
+      "lon": 77.7272748,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "loc_name": "WHITEFIELD",
+        "name": "SJR Park ITPL",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2477322390,
+      "lat": 12.9804194,
+      "lon": 77.7275164,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "loc_name": "WHITEFIELD",
+        "name": "SJR Park ITPL",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2477328112,
+      "lat": 12.9777295,
+      "lon": 77.7149595,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "lit": "no",
+        "loc_name": "WHITEFIELD",
+        "name": "SAP ITPL",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3671350512,
+      "lat": 12.9242813,
+      "lon": 77.6811116,
+      "tags": {
+        "name": "Pritech Park"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4443371815,
+      "lat": 12.9213215,
+      "lon": 77.6821169,
+      "tags": {
+        "addr:city": "Bengaluru",
+        "addr:housenumber": "54-64",
+        "addr:postcode": "560037",
+        "addr:street": "\"Survey No. 51-64, Marathahalli-Sarjapur Outer Ring Road, Behind RMZ Ecospace,",
+        "name": "Pritech Park",
+        "phone": "08049438181",
+        "website": "https://www.gizmocode.com"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7106084448,
+      "lat": 13.041313,
+      "lon": 77.6216623,
+      "tags": {
+        "bus": "yes",
+        "name": "Manyata Embassy Business Park",
+        "name:en": "Manyata Embassy Business Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7216699836,
+      "lat": 13.040877,
+      "lon": 77.6183731,
+      "tags": {
+        "bus": "yes",
+        "name": "Manyatha Tech Park",
+        "name:en": "Manyatha Tech Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7216699837,
+      "lat": 13.0408346,
+      "lon": 77.6184473,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "covered": "yes",
+        "highway": "bus_stop",
+        "loc_name": "NAGAVARA",
+        "name": "Manyatha Tech Park",
+        "name:en": "Manyatha Tech Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7216699838,
+      "lat": 13.0408171,
+      "lon": 77.6182622,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "covered": "yes",
+        "highway": "bus_stop",
+        "loc_name": "NAGAVARA",
+        "name": "Manyatha Tech Park",
+        "name:en": "Manyatha Tech Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7216699946,
+      "lat": 13.041146,
+      "lon": 77.6204108,
+      "tags": {
+        "bus": "yes",
+        "name": "Manyatha Tech Park",
+        "name:en": "Manyatha Tech Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7216699947,
+      "lat": 13.0411801,
+      "lon": 77.6204098,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "covered": "yes",
+        "highway": "bus_stop",
+        "loc_name": "NAGAVARA",
+        "name": "Manyatha Tech Park",
+        "name:en": "Manyatha Tech Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7488396058,
+      "lat": 12.9806842,
+      "lon": 77.6563394,
+      "tags": {
+        "bus": "yes",
+        "name": "Bagmane Tech Park",
+        "name:en": "Bagmane Tech Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9988971288,
+      "lat": 12.9865383,
+      "lon": 77.7440036,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "GR Tech Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10181978911,
+      "lat": 12.9807765,
+      "lon": 77.6567441,
+      "tags": {
+        "bus": "yes",
+        "name": "Bagmane Tech Park",
+        "name:en": "Bagmane Tech Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11100902652,
+      "lat": 12.9875406,
+      "lon": 77.7360756,
+      "tags": {
+        "alt_name": "ITPL Main Gate",
+        "bus": "yes",
+        "name": "ITPL",
+        "name:en": "ITPL",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11100902653,
+      "lat": 12.987662,
+      "lon": 77.7369161,
+      "tags": {
+        "alt_name": "ITPL Main Gate",
+        "bus": "yes",
+        "name": "ITPL",
+        "name:en": "ITPL",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11832800839,
+      "lat": 12.9678875,
+      "lon": 77.7186913,
+      "tags": {
+        "name": "Tech Park",
+        "shop": "mobile_phone"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13016547169,
+      "lat": 12.9807418,
+      "lon": 77.6567531,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bagmane Tech Park",
+        "name:en": "Bagmane Tech Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "platform",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13353633839,
+      "lat": 12.9878346,
+      "lon": 77.7371697,
+      "tags": {
+        "alt_name": "ITPL Main Gate",
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "no",
+        "highway": "bus_stop",
+        "name": "ITPL",
+        "name:en": "ITPL",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13437492260,
+      "lat": 12.9769092,
+      "lon": 77.6539039,
+      "tags": {
+        "addr:city": "Bangalore",
+        "addr:postcode": "560075",
+        "addr:street": "4th Main Road",
+        "brand": "UPAD Hotel",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "UPAR Hotels Near Bagmane Tech Park - Indiranagar",
+        "phone": "+919176509010",
+        "tourism": "hotel",
+        "website": "https://uparhotels.com/hotel/upar-hotels-near-bagmane-tech-park-indiranagar"
+      }
+    },
+    {
+      "type": "way",
+      "id": 26399625,
+      "center": {
+        "lat": 12.9853202,
+        "lon": 77.7435314
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "GR Salarpuria Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 28453683,
+      "center": {
+        "lat": 12.9497765,
+        "lon": 77.6435314
+      },
+      "tags": {
+        "alt_name": "EGL Business Park",
+        "developer": "Embassy Group",
+        "landuse": "commercial",
+        "name": "Embassy GolfLinks Business Park",
+        "short_name": "EGL",
+        "start_date": "2004"
+      }
+    },
+    {
+      "type": "way",
+      "id": 34121900,
+      "center": {
+        "lat": 13.048355,
+        "lon": 77.6207059
+      },
+      "tags": {
+        "alt_name": "Embassy Manyata Business Park",
+        "developer": "Embassy Group",
+        "landuse": "commercial",
+        "name": "Manyata Tech Park",
+        "official_name": "Manyata Embassy Business Park",
+        "wikidata": "Q19893712",
+        "wikimedia_commons": "Category:Manyata Tech Park",
+        "wikipedia": "en:Manyata Embassy Business Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 83231745,
+      "center": {
+        "lat": 12.9940375,
+        "lon": 77.7054691
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Bhoruka Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 86310221,
+      "center": {
+        "lat": 12.9807805,
+        "lon": 77.7143203
+      },
+      "tags": {
+        "addr:housenumber": "25/3",
+        "addr:postcode": "560 048",
+        "addr:street": "Seetharampalya",
+        "landuse": "commercial",
+        "name": "B.S.A. Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 122668437,
+      "center": {
+        "lat": 12.9740607,
+        "lon": 77.7207949
+      },
+      "tags": {
+        "addr:city": "Bangalore",
+        "addr:country": "IN",
+        "addr:housename": "Mfar Silverline Tech Park",
+        "building": "office",
+        "building:levels": "5",
+        "name": "Mfar Silverline Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 122668438,
+      "center": {
+        "lat": 12.9814693,
+        "lon": 77.7212459
+      },
+      "tags": {
+        "barrier": "wall",
+        "landuse": "commercial",
+        "name": "Prestige Featherlite Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 122668456,
+      "center": {
+        "lat": 12.9820237,
+        "lon": 77.7212935
+      },
+      "tags": {
+        "barrier": "wall",
+        "landuse": "commercial",
+        "name": "Microchip Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 122701299,
+      "center": {
+        "lat": 12.9734362,
+        "lon": 77.7208188
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Nethra Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 123168401,
+      "center": {
+        "lat": 12.9856017,
+        "lon": 77.742134
+      },
+      "tags": {
+        "access": "yes",
+        "bicycle": "yes",
+        "cycleway": "lane",
+        "foot": "yes",
+        "highway": "residential",
+        "maxspeed": "30",
+        "motor_vehicle": "yes",
+        "name": "G. R. Tech Park Road",
+        "oneway": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 131609429,
+      "center": {
+        "lat": 12.9342944,
+        "lon": 77.6022188
+      },
+      "tags": {
+        "building": "office",
+        "name": "Oracle Technology Park",
+        "office": "it"
+      }
+    },
+    {
+      "type": "way",
+      "id": 145130697,
+      "center": {
+        "lat": 12.9830298,
+        "lon": 77.7511495
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "HM Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 150212366,
+      "center": {
+        "lat": 12.9771938,
+        "lon": 77.7262126
+      },
+      "tags": {
+        "depot": "bus",
+        "industrial": "depot",
+        "landuse": "industrial",
+        "name": "BMTC Depot 18 (ITPL)",
+        "name:kn": "\u0cac\u0cc6\u0c82.\u0cae.\u0cb8\u0cbe.\u0cb8\u0c82. \u0ca1\u0cc6\u0caa\u0ccb \u0ce7\u0cee",
+        "operator": "BMTC"
+      }
+    },
+    {
+      "type": "way",
+      "id": 157265782,
+      "center": {
+        "lat": 13.1613021,
+        "lon": 77.7131185
+      },
+      "tags": {
+        "alt_name": "KIADB Bengaluru Airport IT Park",
+        "landuse": "industrial",
+        "name": "Bengaluru IT Park",
+        "operator": "KIADB"
+      }
+    },
+    {
+      "type": "way",
+      "id": 159980947,
+      "center": {
+        "lat": 12.9166623,
+        "lon": 77.6713465
+      },
+      "tags": {
+        "addr:city": "Bengaluru",
+        "addr:district": "Bengaluru",
+        "addr:postcode": "560103",
+        "addr:street": "Sarjapur Main Road Ambalipura, Harlur",
+        "airconditioned": "yes",
+        "building": "yes",
+        "building:levels": "5",
+        "name": "Zepto HQ-Bharat IT Park",
+        "office": "company",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 170320607,
+      "center": {
+        "lat": 12.7877928,
+        "lon": 77.6515801
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "HCL Technologies SEZ"
+      }
+    },
+    {
+      "type": "way",
+      "id": 179321519,
+      "center": {
+        "lat": 12.9915375,
+        "lon": 77.7384592
+      },
+      "tags": {
+        "alt_name": "Embassy Concord",
+        "barrier": "wall",
+        "construction": "commercial",
+        "landuse": "construction",
+        "name": "Embassy East Business Park (u/c)",
+        "source": "https://parivesh.nic.in/newupgrade/#/report/ec?proposalId=123607554&legacyApplicationId=0"
+      }
+    },
+    {
+      "type": "way",
+      "id": 181455079,
+      "center": {
+        "lat": 12.9784425,
+        "lon": 77.7254081
+      },
+      "tags": {
+        "building": "office",
+        "name": "Shailendra Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 181544627,
+      "center": {
+        "lat": 12.9792881,
+        "lon": 77.7243702
+      },
+      "tags": {
+        "addr:plot": "71",
+        "barrier": "wall",
+        "landuse": "commercial",
+        "name": "Skora Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 217566879,
+      "center": {
+        "lat": 12.9519251,
+        "lon": 77.6423475
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Fairway Business Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 230424760,
+      "center": {
+        "lat": 12.8991556,
+        "lon": 77.6312075
+      },
+      "tags": {
+        "access": "private",
+        "cycleway": "no",
+        "highway": "service",
+        "lanes": "2",
+        "maxspeed": "20",
+        "name": "AMR Tech Park Road",
+        "oneway": "no",
+        "sidewalk": "no",
+        "source": "digitalglobe",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 231339924,
+      "center": {
+        "lat": 12.8384513,
+        "lon": 77.6532165
+      },
+      "tags": {
+        "amenity": "parking",
+        "capacity": "100",
+        "name": "Wipro SEZ Car Parking",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "way",
+      "id": 231354813,
+      "center": {
+        "lat": 12.8387622,
+        "lon": 77.6635722
+      },
+      "tags": {
+        "landuse": "industrial",
+        "name": "Software Technology Parks of India"
+      }
+    },
+    {
+      "type": "way",
+      "id": 232972967,
+      "center": {
+        "lat": 12.9345429,
+        "lon": 77.6945078
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Cessna Business Park",
+        "official_name": "Prestige Cessna Business Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 233001388,
+      "center": {
+        "lat": 12.9422614,
+        "lon": 77.6928369
+      },
+      "tags": {
+        "addr:postcode": "560103",
+        "barrier": "wall",
+        "developer": "Prestige Group",
+        "landuse": "commercial",
+        "name": "Prestige Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 264102930,
+      "center": {
+        "lat": 12.8400518,
+        "lon": 77.6644813
+      },
+      "tags": {
+        "building": "commercial",
+        "building:levels": "4",
+        "name": "Prathik Tech Park",
+        "smoking": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 265565391,
+      "center": {
+        "lat": 13.0516461,
+        "lon": 77.59491
+      },
+      "tags": {
+        "developer": "Embassy Group",
+        "landuse": "commercial",
+        "name": "Kirloskar Business Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 323047914,
+      "center": {
+        "lat": 12.9787834,
+        "lon": 77.6612699
+      },
+      "tags": {
+        "developer": "Bagmane Group",
+        "landuse": "commercial",
+        "name": "Bagmane Tech Park",
+        "name:kn": "\u0cac\u0cbe\u0c97\u0ccd\u0cae\u0ca8\u0cc6 \u0c9f\u0cc6\u0c95\u0ccd \u0caa\u0cbe\u0cb0\u0ccd\u0c95\u0ccd"
+      }
+    },
+    {
+      "type": "way",
+      "id": 347243838,
+      "center": {
+        "lat": 12.9705179,
+        "lon": 77.7170038
+      },
+      "tags": {
+        "building": "office",
+        "name": "Knowledge Square IT Park",
+        "office": "company",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 347475248,
+      "center": {
+        "lat": 12.9370136,
+        "lon": 77.6951215
+      },
+      "tags": {
+        "addr:city": "Bengaluru, India",
+        "addr:postcode": "560103",
+        "addr:street": "Cessna Business Park, Sarjapur - Marathahalli Outer Ring Road, Kadubeesanahalli, Bellandur Post",
+        "addr:unit": "SEZ Unit",
+        "air_conditioning": "yes",
+        "brand": "Aloft",
+        "brand:wikidata": "Q4734166",
+        "building": "yes",
+        "building:levels": "5",
+        "description": "Aloft Bengaluru Cessna Business Park, a sassy, savvy business hotel in Bangalore Bellandur, conveniently located on the Outer Ring Road.",
+        "email": "aloftbengaluru.cessnapark@alofthotels.com",
+        "fax": "+91 80 4510 1011",
+        "internet_access": "wlan",
+        "name": "Aloft Bengaluru Cessna Business Park",
+        "phone": "+91 80 4510 1010",
+        "tourism": "hotel",
+        "website": "https://www.marriott.com/hotels/travel/blral-aloft-bengaluru-cessna-business-park/",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 348659340,
+      "center": {
+        "lat": 12.9711126,
+        "lon": 77.7245961
+      },
+      "tags": {
+        "building": "yes",
+        "name": "Divyashri Tech Park Office"
+      }
+    },
+    {
+      "type": "way",
+      "id": 349654005,
+      "center": {
+        "lat": 12.8991593,
+        "lon": 77.6309555
+      },
+      "tags": {
+        "addr:city": "Bangalore",
+        "addr:housenumber": "23,24",
+        "addr:postcode": "560068",
+        "addr:street": "Hosur Road",
+        "addr:suburb": "Bommanahalli",
+        "landuse": "commercial",
+        "name": "AMR Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 360342802,
+      "center": {
+        "lat": 12.9577112,
+        "lon": 77.744257
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Sigma Soft Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 383645142,
+      "center": {
+        "lat": 12.9270798,
+        "lon": 77.6827842
+      },
+      "tags": {
+        "building": "office",
+        "name": "Global Technology Park Tower A",
+        "office": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 383645143,
+      "center": {
+        "lat": 12.9264169,
+        "lon": 77.6828667
+      },
+      "tags": {
+        "building": "office",
+        "name": "Global Technology Park Tower B",
+        "office": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 383645144,
+      "center": {
+        "lat": 12.9256325,
+        "lon": 77.6829738
+      },
+      "tags": {
+        "building": "office",
+        "name": "Global Technology Park Tower C",
+        "office": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 414833842,
+      "center": {
+        "lat": 12.9728381,
+        "lon": 77.7200602
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Gayatri Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 414833843,
+      "center": {
+        "lat": 12.9699135,
+        "lon": 77.7173293
+      },
+      "tags": {
+        "alt_name": "Kalyani Platina",
+        "landuse": "commercial",
+        "name": "Kalyani Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 450537541,
+      "center": {
+        "lat": 12.9256684,
+        "lon": 77.6826976
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Global Technology Park",
+        "operator": "Mapletree"
+      }
+    },
+    {
+      "type": "way",
+      "id": 460960666,
+      "center": {
+        "lat": 12.9013353,
+        "lon": 77.7047386
+      },
+      "tags": {
+        "addr:city": "Bengaluru",
+        "addr:postcode": "560035",
+        "fixme": "Requires further on ground mapping The region seems to be incorrect, see neighbouring football field",
+        "landuse": "commercial",
+        "name": "RGA Tech Park",
+        "phone": "+9190668 40485"
+      }
+    },
+    {
+      "type": "way",
+      "id": 532166932,
+      "center": {
+        "lat": 12.9620572,
+        "lon": 77.5994998
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Global Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 552246649,
+      "center": {
+        "lat": 12.9023663,
+        "lon": 77.7057499
+      },
+      "tags": {
+        "highway": "tertiary",
+        "name": "RGA Tech Park road",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 577663653,
+      "center": {
+        "lat": 12.9373521,
+        "lon": 77.6063767
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Global Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 597623760,
+      "center": {
+        "lat": 12.9027795,
+        "lon": 77.705102
+      },
+      "tags": {
+        "dual_carriageway": "yes",
+        "frontage_road": "yes",
+        "highway": "tertiary",
+        "name": "RGA Tech Park road",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 635317794,
+      "center": {
+        "lat": 12.8968842,
+        "lon": 77.712249
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Wipro SEZ"
+      }
+    },
+    {
+      "type": "way",
+      "id": 692956912,
+      "center": {
+        "lat": 12.9234148,
+        "lon": 77.6831816
+      },
+      "tags": {
+        "access": "private",
+        "highway": "service",
+        "name": "Global technology Park Tower Road",
+        "oneway": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 732010480,
+      "center": {
+        "lat": 12.9813103,
+        "lon": 77.6977356
+      },
+      "tags": {
+        "developer": "Bagmane Group",
+        "landuse": "commercial",
+        "name": "Bagmane Constellation Business Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 732317816,
+      "center": {
+        "lat": 13.0635192,
+        "lon": 77.5947283
+      },
+      "tags": {
+        "alt_name": "Gardencity Verde",
+        "landuse": "commercial",
+        "name": "Gardencity IT Park",
+        "official_name": "CapitaLand Garden City",
+        "old_name": "CapitaLand IT Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 760685450,
+      "center": {
+        "lat": 13.11712,
+        "lon": 77.6063108
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "North Gate Business Park - Phase 3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 775230098,
+      "center": {
+        "lat": 13.0439834,
+        "lon": 77.6168145
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Karle SEZ"
+      }
+    },
+    {
+      "type": "way",
+      "id": 775230119,
+      "center": {
+        "lat": 13.0430348,
+        "lon": 77.6151359
+      },
+      "tags": {
+        "alt_name": "Manpho Spectrum 2",
+        "landuse": "construction",
+        "name": "Karle SEZ"
+      }
+    },
+    {
+      "type": "way",
+      "id": 775230124,
+      "center": {
+        "lat": 13.045555,
+        "lon": 77.6171727
+      },
+      "tags": {
+        "landuse": "construction",
+        "name": "Karle SEZ"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777618526,
+      "center": {
+        "lat": 13.0421104,
+        "lon": 77.6235201
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "MS Ramaiah Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 779344670,
+      "center": {
+        "lat": 12.9304997,
+        "lon": 77.6151243
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Enzyme Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 779346494,
+      "center": {
+        "lat": 12.9374508,
+        "lon": 77.6893324
+      },
+      "tags": {
+        "alt_name": "Kalyani Helios Business Park",
+        "landuse": "commercial",
+        "name": "Helios Business Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 781538804,
+      "center": {
+        "lat": 13.0307414,
+        "lon": 77.5410759
+      },
+      "tags": {
+        "construction": "commercial",
+        "landuse": "construction",
+        "name": "RNS Business Park (u/c)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 781588921,
+      "center": {
+        "lat": 12.9779311,
+        "lon": 77.5508471
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Rajajinagar IT Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 782063731,
+      "center": {
+        "lat": 13.0424779,
+        "lon": 77.6206056
+      },
+      "tags": {
+        "addr:city": "Bengaluru",
+        "addr:postcode": "560045",
+        "addr:street": "Outer Ring Road",
+        "brand": "Hilton",
+        "brand:wikidata": "Q121093902",
+        "building": "hotel",
+        "check_date": "2025-11-18",
+        "contact:facebook": "https://www.facebook.com/HiltonHotelsEmbassyManyataBengaluru",
+        "contact:instagram": "https://www.instagram.com/hilton_hotels_manyata_blr/?hl=en",
+        "email": "BLRGS_RES @hilton.com",
+        "internet_access": "yes",
+        "name": "Hilton Bengaluru Embassy Manyata Business Park",
+        "operator": "Hilton",
+        "phone": "+91 80 6901 2345",
+        "rooms": "266",
+        "stars": "5",
+        "tourism": "hotel",
+        "website": "https://www.hilton.com/en/hotels/blrgshi-hilton-bengaluru-embassy-manyata-business-park/",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 782063732,
+      "center": {
+        "lat": 13.0418354,
+        "lon": 77.6201145
+      },
+      "tags": {
+        "addr:city": "Bengaluru",
+        "addr:postcode": "560045",
+        "addr:street": "Outer Ring Road",
+        "brand": "Hilton Garden Inn",
+        "brand:wikidata": "Q121091985",
+        "building": "hotel",
+        "building:material": "glass",
+        "contact:facebook": "https://facebook.com/HiltonHotelsEmbassyManyataBengaluru",
+        "contact:instagram": "https://www.instagram.com/hilton_hotels_manyata_blr/?hl=en",
+        "contact:linkedin": "https://www.linkedin.com/company/hilton-and-hilton-garden-inn-bengaluru-embassy-manyata-business-park",
+        "email": "blrem_res@hilton.com",
+        "internet_access": "yes",
+        "internet_access:fee": "no",
+        "name": "Hilton Garden Inn Bengaluru Embassy Manyata Business Park",
+        "operator": "Hilton",
+        "phone": "+91 80 69112345",
+        "rooms": "353",
+        "stars": "5",
+        "tourism": "hotel",
+        "website": "https://www.hilton.com/en/hotels/blremgi-hilton-garden-inn-bengaluru-embassy-manyata-business-park/",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 782064420,
+      "center": {
+        "lat": 13.0423911,
+        "lon": 77.6182459
+      },
+      "tags": {
+        "construction": "commercial",
+        "landuse": "construction",
+        "name": "Ebisu Tech Park (u/c)",
+        "source": "https://environmentclearance.nic.in/state/fb_modiec_report.aspx?cat_id=57236"
+      }
+    },
+    {
+      "type": "way",
+      "id": 790430696,
+      "center": {
+        "lat": 13.196202,
+        "lon": 77.6919163
+      },
+      "tags": {
+        "construction": "commercial",
+        "landuse": "construction",
+        "name": "Business Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 888606703,
+      "center": {
+        "lat": 12.9825934,
+        "lon": 77.6914829
+      },
+      "tags": {
+        "developer": "Bagmane Group",
+        "landuse": "commercial",
+        "name": "Bagmane Rio Business Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 963445870,
+      "center": {
+        "lat": 13.0685423,
+        "lon": 77.5919573
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "L&T Tech Park Phase 1",
+        "name:kn": "\u0cb2\u0cbe\u0cb0\u0ccd\u0cb8\u0ca8\u0ccd \u0c85\u0c82\u0ca1\u0ccd \u0c9f\u0cc2\u0cac\u0ccd\u0cb0\u0cca \u0cb0\u0cc7\u0c82\u0c9f\u0ccd\u0cb0\u0cc0 \u0cac\u0ccc\u0cb2\u0cc6\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1002994429,
+      "center": {
+        "lat": 12.991288,
+        "lon": 77.7138092
+      },
+      "tags": {
+        "highway": "primary",
+        "name": "ITPL Main Road",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1041856519,
+      "center": {
+        "lat": 12.9309866,
+        "lon": 77.6871427
+      },
+      "tags": {
+        "addr:city": "Bangalore",
+        "addr:housenumber": "55/1",
+        "addr:postcode": "560037",
+        "addr:street": "Near Embassy Tech, Marathahalli Outer Ring Road, Deevarabeesanahalli",
+        "landuse": "commercial",
+        "name": "BS Tech Park",
+        "phone": "080 4039 9000",
+        "website": "https://www.countryclubbangalore.com/country-club-sarjapur-road/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1060953964,
+      "center": {
+        "lat": 12.9307068,
+        "lon": 77.6967296
+      },
+      "tags": {
+        "frequency": "50",
+        "location": "outdoor",
+        "name": "Vikas Tech Park Substation",
+        "operator": "KTPCL",
+        "power": "substation",
+        "rating": "300 MVA",
+        "ref": "1202003CE",
+        "start_date": "2017-03-05",
+        "substation": "distribution",
+        "voltage": "220000;66000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1061038567,
+      "center": {
+        "lat": 12.936175,
+        "lon": 77.6980717
+      },
+      "tags": {
+        "building": "office",
+        "name": "Krishna Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1070952252,
+      "center": {
+        "lat": 12.8438305,
+        "lon": 77.6574686
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Helix Biotech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1070952274,
+      "center": {
+        "lat": 12.8434447,
+        "lon": 77.6560637
+      },
+      "tags": {
+        "alt_name": "Bangalore Life Sciences Park",
+        "landuse": "commercial",
+        "name": "360 Business Park",
+        "official_name": "Bengaluru Lifesciences Park",
+        "source": "https://parivesh.nic.in/newupgrade/#/report/ec?proposalId=70433117"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1071061035,
+      "center": {
+        "lat": 12.8922208,
+        "lon": 77.6422759
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "AKR Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1079506852,
+      "center": {
+        "lat": 13.1153234,
+        "lon": 77.6058072
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "North Gate Business Park - Phase 1"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1083400623,
+      "center": {
+        "lat": 12.9782865,
+        "lon": 77.7278184
+      },
+      "tags": {
+        "building": "office",
+        "building:levels": "7",
+        "name": "JBR Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1083449784,
+      "center": {
+        "lat": 13.0463867,
+        "lon": 77.617176
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Karle SEZ"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1084026308,
+      "center": {
+        "lat": 12.9903481,
+        "lon": 77.7138869
+      },
+      "tags": {
+        "highway": "primary",
+        "name": "ITPL Main Road",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1084971894,
+      "center": {
+        "lat": 12.9304608,
+        "lon": 77.68873
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Embassy Tech Park - Block 8"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1084971895,
+      "center": {
+        "lat": 12.9199713,
+        "lon": 77.6716962
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Vaishnavi Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1086044109,
+      "center": {
+        "lat": 12.9513404,
+        "lon": 77.6080853
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Novel Business Park",
+        "official_name": "Salarpuria Triton"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1090888013,
+      "center": {
+        "lat": 12.8409395,
+        "lon": 77.6771657
+      },
+      "tags": {
+        "addr:city": "Bengaluru",
+        "addr:postcode": "560100",
+        "addr:street": "Veer Sandra, BTM Phase 1, Phase 2, Electronic City",
+        "building": "commercial",
+        "building:levels": "15",
+        "name": "Salarpuriya Sattva South-Gate Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1097355608,
+      "center": {
+        "lat": 12.9301143,
+        "lon": 77.6966051
+      },
+      "tags": {
+        "frequency": "50",
+        "location": "outdoor",
+        "name": "Vikas Tech Park Substation",
+        "operator": "KTPCL",
+        "power": "substation",
+        "rating": "63 MVA",
+        "ref": "1202003EF",
+        "start_date": "2017-03-05",
+        "substation": "distribution",
+        "voltage": "66000;11000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1110808769,
+      "center": {
+        "lat": 13.1163566,
+        "lon": 77.6061392
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "North Gate Business Park - Phase 2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1119204877,
+      "center": {
+        "lat": 12.841443,
+        "lon": 77.6773895
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Salarpuria Sattva Alexandria Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1123146961,
+      "center": {
+        "lat": 12.9911202,
+        "lon": 77.713737
+      },
+      "tags": {
+        "highway": "primary",
+        "name": "ITPL Main Road",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1135846612,
+      "center": {
+        "lat": 12.9879871,
+        "lon": 77.746852
+      },
+      "tags": {
+        "addr:housenumber": "10",
+        "full_name": "Goyal & Co Titanium Tech Park",
+        "landuse": "commercial",
+        "name": "Titanium Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1144296220,
+      "center": {
+        "lat": 12.9760088,
+        "lon": 77.7258437
+      },
+      "tags": {
+        "addr:plot": "97",
+        "barrier": "wall",
+        "landuse": "commercial",
+        "name": "Prasad Technology Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1147646460,
+      "center": {
+        "lat": 12.9723619,
+        "lon": 77.7209874
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "V K Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1149670804,
+      "center": {
+        "lat": 12.9863282,
+        "lon": 77.7329666
+      },
+      "tags": {
+        "barrier": "wall",
+        "landuse": "commercial",
+        "name": "Subramanya Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1151907045,
+      "center": {
+        "lat": 12.979668,
+        "lon": 77.7243891
+      },
+      "tags": {
+        "addr:plot": "72,73",
+        "barrier": "wall",
+        "landuse": "commercial",
+        "name": "Akshay Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1151907061,
+      "center": {
+        "lat": 12.9823039,
+        "lon": 77.7207388
+      },
+      "tags": {
+        "barrier": "wall",
+        "landuse": "commercial",
+        "name": "Salaruria Sattva Mindcomp Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1152481905,
+      "center": {
+        "lat": 12.9863374,
+        "lon": 77.7325996
+      },
+      "tags": {
+        "addr:city": "Bangalore",
+        "addr:housenumber": "Plot 4",
+        "addr:postcode": "560066",
+        "addr:street": "Whitefield Road",
+        "barrier": "wall",
+        "brand": "Holiday Inn Express",
+        "brand:wikidata": "Q5880423",
+        "check_date": "2025-05-21",
+        "internet_access": "wlan",
+        "landuse": "commercial",
+        "name": "Holiday Inn Express Bengaluru Whitefield ITPL",
+        "payment:american_express": "yes",
+        "payment:diners_club": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "phone": "+91 80-6719-6666",
+        "tourism": "hotel",
+        "website": "https://www.ihg.com/holidayinnexpress/hotels/us/en/whitefield/blrep/hoteldetail",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1154800563,
+      "center": {
+        "lat": 12.9772334,
+        "lon": 77.7284794
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "JP Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1156186710,
+      "center": {
+        "lat": 12.9905274,
+        "lon": 77.7139626
+      },
+      "tags": {
+        "highway": "primary",
+        "name": "ITPL Main Road",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1182700238,
+      "center": {
+        "lat": 13.1574476,
+        "lon": 77.7123213
+      },
+      "tags": {
+        "construction": "commercial",
+        "landuse": "construction",
+        "name": "Jayalakshmi Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1190136202,
+      "center": {
+        "lat": 12.9846573,
+        "lon": 77.7365257
+      },
+      "tags": {
+        "name": "ITPL",
+        "operator": "KPTCL",
+        "operator:wikidata": "Q17064153",
+        "power": "substation",
+        "substation": "transmission",
+        "voltage": "220000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1196254917,
+      "center": {
+        "lat": 12.8503341,
+        "lon": 77.6699683
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Maruthi Concorde Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1212370420,
+      "center": {
+        "lat": 12.9312739,
+        "lon": 77.6853971
+      },
+      "tags": {
+        "developer": "Shilpitha",
+        "landuse": "commercial",
+        "name": "Shilpitha Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240046864,
+      "center": {
+        "lat": 13.0647624,
+        "lon": 77.5941738
+      },
+      "tags": {
+        "alt_name": "Gardencity Verde",
+        "construction": "commercial",
+        "landuse": "construction",
+        "name": "CapitaLand IT Park",
+        "official_name": "CapitaLand Garden City"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1244633653,
+      "center": {
+        "lat": 12.8416752,
+        "lon": 77.6558134
+      },
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "name": "360 Business Park Road",
+        "oneway": "yes",
+        "sidewalk": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1244633655,
+      "center": {
+        "lat": 12.8410508,
+        "lon": 77.655696
+      },
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "name": "360 Business Park Road",
+        "oneway": "yes",
+        "sidewalk": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1257330721,
+      "center": {
+        "lat": 12.8915097,
+        "lon": 77.641278
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Novel Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1257330725,
+      "center": {
+        "lat": 12.8914704,
+        "lon": 77.6375458
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Ozone Manay Technology Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1257432367,
+      "center": {
+        "lat": 12.9725554,
+        "lon": 77.7034125
+      },
+      "tags": {
+        "landuse": "construction",
+        "name": "Allure Business Park (u/c)",
+        "source": "https://parivesh.nic.in/newupgrade/#/report/ec?proposalId=132617781&legacyApplicationId=0"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1262098000,
+      "center": {
+        "lat": 12.9197751,
+        "lon": 77.4720347
+      },
+      "tags": {
+        "landuse": "industrial",
+        "name": "Composite Technology Park, RV TIFAC",
+        "office": "research"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1267672098,
+      "center": {
+        "lat": 13.1258485,
+        "lon": 77.6165065
+      },
+      "tags": {
+        "name": "Hinduja Ecopolis SEZ",
+        "proposed": "commercial",
+        "source": "https://parivesh.nic.in/newupgrade/#/report/ec?proposalId=1229699483&legacyApplicationId=0"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1268343122,
+      "center": {
+        "lat": 12.9359987,
+        "lon": 77.6212551
+      },
+      "tags": {
+        "addr:housenumber": "99",
+        "addr:street": "5th Cross Road",
+        "building": "office",
+        "name": "Infomart Tech Park",
+        "office": "company",
+        "website": "http://infomartgroup.com/index.html"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1268933943,
+      "center": {
+        "lat": 12.8956198,
+        "lon": 77.7250247
+      },
+      "tags": {
+        "construction": "commercial",
+        "landuse": "construction",
+        "name": "MJR Tech Park (u/c)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1275201422,
+      "center": {
+        "lat": 12.8445793,
+        "lon": 77.6571888
+      },
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "name": "360 Business Park Road",
+        "oneway": "yes",
+        "sidewalk": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1275201423,
+      "center": {
+        "lat": 12.8446181,
+        "lon": 77.6571567
+      },
+      "tags": {
+        "cycleway:left": "shared_lane",
+        "highway": "secondary",
+        "lanes": "2",
+        "name": "360 Business Park Road",
+        "oneway": "yes",
+        "sidewalk": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1279894925,
+      "center": {
+        "lat": 13.1719857,
+        "lon": 77.7401309
+      },
+      "tags": {
+        "barrier": "wall",
+        "construction": "commercial",
+        "landuse": "construction",
+        "name": "Kalyani Tech Park (u/c)",
+        "source": "https://parivesh.nic.in/newupgrade/#/report/ec?proposalId=112391290&legacyApplicationId=0"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1282760092,
+      "center": {
+        "lat": 13.0552261,
+        "lon": 77.6163147
+      },
+      "tags": {
+        "name": "Manyata Tech Park Phase 2",
+        "proposed": "commercial"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1301971898,
+      "center": {
+        "lat": 12.8435458,
+        "lon": 77.6558548
+      },
+      "tags": {
+        "cycleway:left": "shared_lane",
+        "highway": "secondary",
+        "lanes": "2",
+        "name": "360 Business Park Road",
+        "oneway": "yes",
+        "sidewalk": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1302227114,
+      "center": {
+        "lat": 12.9863725,
+        "lon": 77.739803
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Brigade Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1303625883,
+      "center": {
+        "lat": 12.9859815,
+        "lon": 77.7093255
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Rathi Legacy - Rohan Tech Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1335893435,
+      "center": {
+        "lat": 12.8450873,
+        "lon": 77.6586633
+      },
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "name": "360 Business Park Road",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1335893436,
+      "center": {
+        "lat": 12.8450225,
+        "lon": 77.6586532
+      },
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "name": "360 Business Park Road",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1338543702,
+      "center": {
+        "lat": 12.7614021,
+        "lon": 77.8442837
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Hosur IT Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1343502803,
+      "center": {
+        "lat": 13.0421754,
+        "lon": 77.7634317
+      },
+      "tags": {
+        "amenity": "school",
+        "landuse": "education",
+        "name": "National Public School ITPL"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1363976036,
+      "center": {
+        "lat": 12.9792056,
+        "lon": 77.6647502
+      },
+      "tags": {
+        "access": "permissive",
+        "highway": "service",
+        "name": "Bagmane Tech Park Flyover",
+        "oneway": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1363976037,
+      "center": {
+        "lat": 12.9794861,
+        "lon": 77.6672187
+      },
+      "tags": {
+        "access": "permissive",
+        "highway": "service",
+        "name": "Bagmane Tech Park Flyover",
+        "oneway": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1363976038,
+      "center": {
+        "lat": 12.9795288,
+        "lon": 77.667215
+      },
+      "tags": {
+        "access": "permissive",
+        "highway": "service",
+        "name": "Bagmane Tech Park Flyover",
+        "oneway": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1363976039,
+      "center": {
+        "lat": 12.9792906,
+        "lon": 77.6647441
+      },
+      "tags": {
+        "access": "permissive",
+        "highway": "service",
+        "name": "Bagmane Tech Park Flyover",
+        "oneway": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1363976040,
+      "center": {
+        "lat": 12.9793122,
+        "lon": 77.6661175
+      },
+      "tags": {
+        "access": "permissive",
+        "bridge": "yes",
+        "highway": "service",
+        "layer": "1",
+        "name": "Bagmane Tech Park Flyover",
+        "oneway": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1363976041,
+      "center": {
+        "lat": 12.9793971,
+        "lon": 77.6661072
+      },
+      "tags": {
+        "access": "permissive",
+        "bridge": "yes",
+        "highway": "service",
+        "layer": "1",
+        "name": "Bagmane Tech Park Flyover",
+        "oneway": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1366161300,
+      "center": {
+        "lat": 13.0714966,
+        "lon": 77.592091
+      },
+      "tags": {
+        "construction": "commercial",
+        "landuse": "construction",
+        "name": "L&T Tech Park Phase 2 (u/c)",
+        "note": "Block 5: 3B+G+9UF"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1389761625,
+      "center": {
+        "lat": 12.9167185,
+        "lon": 77.6714151
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Zepto HQ-Bharat IT Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1468457603,
+      "center": {
+        "lat": 13.1960286,
+        "lon": 77.6869822
+      },
+      "tags": {
+        "construction": "commercial",
+        "landuse": "construction",
+        "name": "Business Park 2 (u/c)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1557898769,
+      "center": {
+        "lat": 12.9300453,
+        "lon": 77.6867809
+      },
+      "tags": {
+        "landuse": "commercial",
+        "name": "Aurbis Business Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1573353107,
+      "center": {
+        "lat": 12.8841757,
+        "lon": 77.5528295
+      },
+      "tags": {
+        "construction": "commercial",
+        "landuse": "construction",
+        "name": "Morado-Primus Business Park"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 10535902,
+      "center": {
+        "lat": 13.0413329,
+        "lon": 77.6216667
+      },
+      "tags": {
+        "name": "Manyata Embassy Business Park",
+        "name:en": "Manyata Embassy Business Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "stop_area",
+        "type": "public_transport"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 10717714,
+      "center": {
+        "lat": 13.040847,
+        "lon": 77.6183548
+      },
+      "tags": {
+        "name": "Manyatha Tech Park",
+        "name:en": "Manyatha Tech Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "stop_area",
+        "type": "public_transport"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 10717715,
+      "center": {
+        "lat": 13.0411631,
+        "lon": 77.6204103
+      },
+      "tags": {
+        "name": "Manyatha Tech Park",
+        "name:en": "Manyatha Tech Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "stop_area",
+        "type": "public_transport"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14439526,
+      "center": {
+        "lat": 12.9518682,
+        "lon": 77.6552777
+      },
+      "tags": {
+        "from": "ITPL",
+        "name": "Bus V-500CA: ITPL => Banashankri TTMC",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport:version": "2",
+        "ref": "V-500CA",
+        "route": "bus",
+        "to": "Banashankri TTMC",
+        "type": "route",
+        "via": "Marathahalli;Silk Board"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14455658,
+      "center": {
+        "lat": 12.9521443,
+        "lon": 77.6550294
+      },
+      "tags": {
+        "fee": "yes",
+        "from": "Banashankri TTMC",
+        "name": "Bus V-500CA: Banashankri TTMC => ITPL",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport:version": "2",
+        "ref": "V-500CA",
+        "route": "bus",
+        "to": "ITPL",
+        "type": "route",
+        "via": "Marathahalli"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 16177613,
+      "center": {
+        "lat": 12.977209,
+        "lon": 77.7536262
+      },
+      "tags": {
+        "from": "ITPL Metro Station",
+        "name": "MF-1G: ITPL Metro Station => ITPL Metro Station",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport:version": "2",
+        "ref": "MF-1G",
+        "route": "bus",
+        "to": "ITPL Metro Station",
+        "type": "route",
+        "via": "Channasandra;Whitefield Post Office"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 16177614,
+      "center": {
+        "lat": 12.987508,
+        "lon": 77.7360742
+      },
+      "tags": {
+        "alt_name": "ITPL Main Gate",
+        "name": "ITPL",
+        "name:en": "ITPL",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "stop_area",
+        "type": "public_transport"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 16177615,
+      "center": {
+        "lat": 12.9877483,
+        "lon": 77.7370429
+      },
+      "tags": {
+        "alt_name": "ITPL Main Gate",
+        "name": "ITPL",
+        "name:en": "ITPL",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "stop_area",
+        "type": "public_transport"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17101059,
+      "center": {
+        "lat": 13.1163357,
+        "lon": 77.6063589
+      },
+      "tags": {
+        "alt_name": "NorthGate Office Park",
+        "landuse": "commercial",
+        "name": "North Gate Business Park",
+        "type": "multipolygon"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17406977,
+      "center": {
+        "lat": 12.9306568,
+        "lon": 77.6817329
+      },
+      "tags": {
+        "construction": "commercial",
+        "landuse": "construction",
+        "name": "Kalyani Tech Park (u/c)",
+        "name:kn": "\u0c95\u0cb2\u0ccd\u0caf\u0cbe\u0ca3\u0cbf \u0c9f\u0cc6\u0c95\u0ccd \u0caa\u0cbe\u0cb0\u0ccd\u0c95\u0ccd",
+        "type": "multipolygon"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17770374,
+      "center": {
+        "lat": 13.2141234,
+        "lon": 77.6943272
+      },
+      "tags": {
+        "landuse": "industrial",
+        "name": "Bengaluru Signature Business Park",
+        "old_name": "Devanahalli Business Park",
+        "operator": "KSIIDC",
+        "short_name": "BSBP",
+        "type": "multipolygon"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 19377063,
+      "center": {
+        "lat": 12.9807274,
+        "lon": 77.656346
+      },
+      "tags": {
+        "name": "Bagmane Tech Park",
+        "name:en": "Bagmane Tech Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "stop_area",
+        "type": "public_transport"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 19377067,
+      "center": {
+        "lat": 12.9807592,
+        "lon": 77.6567486
+      },
+      "tags": {
+        "name": "Bagmane Tech Park",
+        "name:en": "Bagmane Tech Park",
+        "network": "BMTC",
+        "network:wikidata": "Q3345039",
+        "network:wikipedia": "en:Bengaluru Metropolitan Transport Corporation",
+        "operator": "BMTC",
+        "public_transport": "stop_area",
+        "type": "public_transport"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 19568379,
+      "center": {
+        "lat": 12.9846561,
+        "lon": 77.7377652
+      },
+      "tags": {
+        "building": "apartments",
+        "name": "ITPL Residential Block",
+        "type": "multipolygon"
+      }
+    }
+  ]
+}
