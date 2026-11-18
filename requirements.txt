@@ -26,6 +26,8 @@ shap>=0.45.0
 
 # Phase 6 Geospatial Intelligence & Mapping
 geopy>=2.4.0
+pydeck>=0.9.0
+pyarrow>=26.0.0
 
 # Interactive Web Application
 streamlit>=1.30.0
