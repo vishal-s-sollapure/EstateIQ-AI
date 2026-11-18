@@ -172,10 +172,11 @@ def render_valuation_calculator() -> Tuple[Dict[str, Any], Dict[str, Any]]:
 
     with metric_cols[1]:
         st.metric(
-            label="Confidence Interval (± MAE)",
+            label="Historical Residual-Scale Estimate",
             value=f"₹{prediction['lower_bound_lakhs']:.1f}L – ₹{prediction['upper_bound_lakhs']:.1f}L",
-            delta=f"Margin: ±₹{prediction['mae_margin']:.2f}L",
-            delta_color="off"
+            delta=f"Scale: ±₹{prediction['mae_margin']:.2f}L (Tier MAE)",
+            delta_color="off",
+            help="Empirical error spread based on held-out test MAE for this price bracket. This represents a historical residual-scale estimate, not a calibrated statistical prediction interval."
         )
 
     with metric_cols[2]:

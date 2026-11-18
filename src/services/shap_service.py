@@ -69,9 +69,11 @@ def get_canonical_case_study() -> Dict[str, Any]:
     """
     Returns verified ground-truth and SHAP decomposition details
     for the canonical test listing (Hoodi 2 BHK).
+    Provenance: Held-out test set row 3379 (untouched during model training).
     """
     return {
-        "listing_id": "Test Index 3456",
+        "listing_id": "Held-Out Test Index 3379",
+        "dataset_source": "Held-Out Test Set (N=2,251, 20% partition)",
         "location": "Hoodi",
         "total_sqft": 1420.0,
         "bhk": 2,

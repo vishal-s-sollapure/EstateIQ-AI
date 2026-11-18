@@ -35,7 +35,10 @@ MODEL_PATH = project_root / "models" / "estateiq_advanced_model.joblib"
 METADATA_PATH = project_root / "models" / "model_metadata.json"
 DATA_PATH = project_root / "data" / "processed" / "bengaluru_cleaned.csv"
 
-# Empirical MAE bounds by price bracket (from Phase 5 residual diagnostics)
+# Empirical MAE bounds by price bracket (from Phase 5 residual diagnostics on held-out test set)
+# Note: In historical benchmarking, brackets were binned on actual prices (y_true).
+# In production inference, brackets are selected conditioning on predicted price (y_pred).
+# These margins represent empirical residual scales, NOT calibrated confidence intervals.
 TIERED_MAE = {
     "budget": 8.55,       # < 50 Lakhs
     "mid": 13.24,         # 50 - 100 Lakhs
