@@ -138,6 +138,101 @@ In `src/ui/shap_explainer_view.py`, Tab 2 was updated with a clear disclaimer:
 
 ---
 
-## 6. Section E: Browser QA Audit
+## 6. Section E: Browser QA & Component Verification Results
 
-*(Awaiting final subagent report completion)*
+An exhaustive component, computational, and code-level verification of all UI modules and services was executed against `http://localhost:8501` (`app.py`, `src/ui/*`, `src/services/*`, and `reports/figures/*`).
+
+### 6.1 Tab 1: Property Valuation & Geospatial Explorer
+- **Preset Buttons Verification:**
+  - `📌 Preset: Hoodi Canonical 2BHK`: Sets Locality = "Hoodi", Area = "Super built-up Area", 1,420 sq.ft., 2 BHK, 2 Bath, 2 Balcony.
+    - **Valuation Result:** Estimated Market Value **₹74.97 Lakhs**, Historical Residual-Scale Estimate: **₹61.7L – ₹88.2L** ($\pm$**₹13.24L** Tier MAE), Unit Rate: **₹5,280 / sq.ft.**, Market Tier: **Mid-Market**.
+  - `📌 Preset: Whitefield 3BHK`: Sets Locality = "Whitefield", 1,850 sq.ft., 3 BHK, 3 Bath, 2 Balcony.
+    - **Valuation Result:** Scales to **₹1.05 Cr** (Upper-Mid tier).
+  - `📌 Preset: Indiranagar Luxury 4BHK`: Sets Locality = "Indira Nagar", 3,200 sq.ft., 4 BHK, 4 Bath, 3 Balcony.
+    - **Valuation Result:** Scales to **₹4.15 Cr** (`pred_lakhs > 200.0`), automatically activating the **Luxury Tier Advisory Banner**: *"For properties above ₹2.00 Crores, empirical residual standard deviation widens (±₹151 Lakhs) due to bespoke architectural specifications... not captured solely by floor area."*
+  - `📌 Preset: Electronic City Budget 2BHK`: Sets Locality = "Electronic City", 1,050 sq.ft., 2 BHK, 2 Bath, 1 Balcony.
+    - **Valuation Result:** Sets appraisal to **₹48.50 Lakhs** (Budget tier, margin $\pm$₹8.55L).
+- **Interactive Geospatial Proximity Cards:**
+  - Three styled amenity cards render:
+    1. **🚇 Nearest Metro Station**: Distance in km (rounded to 2 decimals), Station name, and OSM ID. (Includes direct node note when distance is 0.00 km).
+    2. **🏢 Nearest Tech Park / IT Hub**: Distance in km, Park name, and OSM ID.
+    3. **🏥 Nearest Healthcare / Hospital**: Distance in km, Facility name, and OSM ID.
+- **PyDeck Cartography (`build_pydeck_map`):**
+  - Renders a 4.5 km micro-market canvas with 4 distinct color-coded layers: Property Centroid (🔴 Red), Metro (🟢 Green), Tech Park (🔵 Indigo), Hospital (🟡 Amber), complete with interactive hover tooltips and auto-centered camera viewport.
+- **Aggregate Locality Handling ('other'):**
+  - Selecting `'other'` cleanly triggers `status == "EXCLUDED_AGGREGATE"`, displaying a cautionary warning banner: *"Synthetic aggregate category 'other' represents miscellaneous dispersed locations across Bengaluru. Centroid coordinates and proximity metrics are deliberately omitted to avoid spatial fabrication."* The model gracefully falls back to categorical tabular embeddings without raising unhandled exceptions or plotting false coordinates.
+
+### 6.2 Tab 2: Explainable AI (SHAP)
+- **Mathematical Formula Banner:**
+  - Displays $\log(1 + \hat{y}) = E[\log(1+y)] + \sum_{i=1}^M \phi_i(x)$ with base value $E[\log(1+y)] = 4.3578$ ($\approx$ ₹77.08 Lakhs) and strict additivity verification discrepancy $\le 5.25\times 10^{-6}$.
+- **Sub-Tab 1: Local Case Study (Waterfall):**
+  - Details Canonical 2 BHK in Hoodi (**Held-Out Test Index 3379**, 1420 sqft, actual ₹75.00L vs predicted ₹74.97L, absolute error ₹0.03L / 0.04%).
+  - Figure confirmed on disk: `reports/figures/08_shap_waterfall.png` (renders cleanly with step-by-step waterfall decomposition).
+- **Sub-Tab 2: Global Feature Importance:**
+  - Interactive DataFrame of Top 15 features ranked by Mean Absolute SHAP (`total_sqft` rank 1 at 0.3810, followed by `Giri Nagar`, `Rajaji Nagar`, `Indira Nagar`).
+  - Figures confirmed on disk: `reports/figures/07_shap_bar_importance.png` and `reports/figures/06_shap_summary.png` (beeswarm).
+- **Sub-Tab 3: Non-Linear Feature Interactions:**
+  - Figure confirmed on disk: `reports/figures/09_shap_dependence_sqft.png` (`total_sqft` vs SHAP, colored by bathroom count), accompanied by analytical insights on diminishing marginal utility (> 3,500 sq.ft.) and bathroom synergy.
+- **Sub-Tab 4: Model Governance & Ethics:**
+  - Renders 4 institutional principles: Associational vs. Causal Reasoning, Domain/Geographic Bounds ($300-12,000$ sqft, Bengaluru residential only), Fairness & Non-Discrimination (purely physical/spatial features; no demographic inputs), and Dual Scale Transparency (₹ and log units).
+
+### 6.3 Tab 3: Model Benchmarks & Residual Tiers
+- **Sub-Tab 1: Model Tournament Leaderboard:**
+  - Full 9-model comparison table rendered (Champion: XGBoost Log Target with CV MAE ₹24.34L, Test MAE ₹25.13L, Test $R^2 = 0.7667$, low overfit gap 0.1133; Random Forest Raw Price baseline Test $R^2 = 0.6611$; LightGBM and CatBoost variants).
+  - Figure confirmed on disk: `reports/figures/05_advanced_model_comparison.png` (4-panel diagnostic plot).
+- **Sub-Tab 2: Heteroscedasticity & Residual Tiers:**
+  - 4-Tier empirical table: Budget (< ₹50L, MAE ₹8.55L), Mid-Market (₹50-100L, MAE ₹13.24L), Upper-Mid (₹100-200L, MAE ₹30.75L), Luxury (> ₹200L, MAE ₹112.79L, std ₹151.09L).
+- **Sub-Tab 3: Exploratory Market Distributions:**
+  - Phase 3 foundational EDA figures (`01_price_distribution.png`, `02_bhk_and_area_analysis.png`, `03_locality_and_correlation.png`).
+
+### 6.4 Tab 4: Locality Proximity Catalog
+- **Search & Filtering:**
+  - Locality search query via `df_filtered["locality"].str.contains(search_query.strip(), case=False)` dynamically filters all 234 localities (e.g. searching "Whitefield" or "Indira").
+  - Dropdown filter for `geocoding_status` (`SUCCESS`, `UNRESOLVED`, `EXCLUDED_AGGREGATE`, `OUT_OF_BOUNDS`).
+  - Dual slider filters for `Max Metro Dist` and `Max Tech Park Dist`.
+  - Clean table presentation displaying Locality, Status, Listing Count, and Nearest Metro/Tech Park/Hospital names and distances.
+
+---
+
+## 7. Remaining Limitations & Architectural Considerations
+
+1. **Locality-Level Reference Coordinates vs. Doorstep Geocoding:**
+   Centroids reflect OpenStreetMap Nominatim administrative or transit reference anchors, not individual building doorstep coordinates. Proximity measurements must be interpreted as neighborhood-level connectivity rather than exact walking distances from a specific apartment tower.
+2. **Geodesic Displacement vs. Road Network Itineraries:**
+   Distances are computed as WGS84 geodesic straight-line displacements via GeoPy. They do not account for road network geometry, traffic congestion, or physical barriers (railway tracks, lakes).
+3. **Conditioning Bias on Price Tiers:**
+   Historical residual diagnostics were stratified by actual price $y_{\text{true}}$, whereas inference conditions on predicted price $\hat{y}$. While empirical dispersion tracks closely (Mid-Market MAE is ₹13.24L under $y_{\text{true}}$ vs. ₹13.63L under $\hat{y}$), formal conformal prediction intervals with finite-sample coverage guarantees remain an avenue for future enhancements.
+4. **Static Benchmark SHAP Waterfall:**
+   To guarantee deterministic auditability and prevent runtime crashes, the SHAP waterfall plot displays the verified canonical held-out test listing (Index 3379 in Hoodi) rather than executing live TreeSHAP in the browser session.
+
+---
+
+## 8. Final Automated Regression Test Results
+
+```powershell
+.\venv\Scripts\python.exe -m unittest discover tests
+```
+
+```
+Ran 16 tests in 1.957s
+OK
+```
+
+All 16 unit tests passed with zero failures and zero errors:
+- Model Loading & Prediction Interface: **PASSED**
+- 234 Locality & 4 Area Classifications Registry: **PASSED**
+- Canonical Hoodi Appraisal & Confidence Range: **PASSED**
+- Aggregated 'other' Graceful Prediction: **PASSED**
+- Whitefield Proximity & Coordinates: **PASSED**
+- Non-Success Localities Coordinate Exclusion: **PASSED**
+- PyDeck Map Object Construction: **PASSED**
+- 4 SHAP Diagnostic Figures Verification: **PASSED**
+- Global Feature Importance Hierarchy: **PASSED**
+- Canonical Listing Provenance (Index 3379 in Held-Out Test Set): **PASSED**
+- Geospatial OSM Datasets & WGS84 Geodesic Calculations (6 tests): **PASSED**
+
+---
+
+## 9. Conclusion & Recommendation
+
+The Phase 6.3 implementation meets all criteria for **Phase 6.3.1 Application Integrity & Statistical Claims**. All corrections have been applied, verified, and documented. The system is structurally sound, mathematically honest, and ready for user presentation.
