@@ -1,61 +1,187 @@
 """
-EstateIQ AI - Web Application & Valuation Platform
+EstateIQ AI - Phase 6.3: Main Streamlit Application
 ---------------------------------------------------
-Interactive dashboard built with Streamlit for Bengaluru real estate price
-prediction, geospatial neighborhood analytics, and SHAP explainability.
+AI-Powered Bengaluru Real Estate Valuation & Investment Intelligence Platform
+Integrating XGBoost (Log-Target), OpenStreetMap Geospatial Intelligence,
+and Explainable AI (SHAP).
 """
 
+import sys
+import logging
+from pathlib import Path
 import streamlit as st
 
-# Configure Streamlit page layout
+# Configure project path
+project_root = Path(__file__).resolve().parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+from src.ui.valuation_calculator import render_valuation_calculator
+from src.ui.geospatial_explorer import render_geospatial_explorer
+from src.ui.shap_explainer_view import render_shap_explainer_view
+from src.ui.market_insights import render_market_insights
+from src.ui.locality_catalog import render_locality_catalog
+
+# Page configuration
 st.set_page_config(
-    page_title="EstateIQ AI | Real Estate Intelligence",
+    page_title="EstateIQ AI | Bengaluru Real Estate Intelligence",
     page_icon="🏢",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-def main():
-    # Header Section
-    st.title("🏢 EstateIQ AI")
-    st.subheader("AI-Powered Real Estate Valuation & Investment Intelligence Platform")
+# Custom Styling
+st.markdown(
+    """
+    <style>
+    .main-header {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #0f172a;
+        margin-bottom: 2px;
+    }
+    .sub-header {
+        font-size: 1.05rem;
+        color: #475569;
+        margin-bottom: 20px;
+    }
+    .badge-champion {
+        background-color: #dbeafe;
+        color: #1e40af;
+        padding: 4px 10px;
+        border-radius: 9999px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 12px;
+    }
+    .sidebar-card {
+        background-color: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 12px;
+        margin-bottom: 14px;
+    }
+    .sidebar-card-title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 6px;
+    }
+    .sidebar-card-item {
+        font-size: 0.82rem;
+        color: #475569;
+        margin: 3px 0;
+    }
+    footer {
+        visibility: hidden;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# SIDEBAR: Metadata & Model Architecture
+with st.sidebar:
+    st.markdown("## 🏢 EstateIQ AI")
+    st.markdown("*Bengaluru Property Valuation & Geospatial Intelligence*")
+    st.markdown('<span class="badge-champion">Phase 6.3 • Production Grade</span>', unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    # Champion Model Badge Card
     st.markdown(
         """
-        Welcome to **EstateIQ AI**. This platform leverages machine learning, 
-        OpenStreetMap geospatial analytics, and Explainable AI (SHAP) to provide accurate 
-        residential valuations and investment insights across Bengaluru.
+        <div class="sidebar-card">
+            <div class="sidebar-card-title">🥇 Champion Valuation Engine</div>
+            <div class="sidebar-card-item"><strong>Algorithm:</strong> XGBoost Regressor</div>
+            <div class="sidebar-card-item"><strong>Target Scale:</strong> Log(1 + Price)</div>
+            <div class="sidebar-card-item"><strong>Test R²:</strong> 0.7667 (&gt; 0.75 goal)</div>
+            <div class="sidebar-card-item"><strong>Test MAE:</strong> ₹25.13 Lakhs</div>
+            <div class="sidebar-card-item"><strong>Test RMSE:</strong> ₹59.09 Lakhs</div>
+            <div class="sidebar-card-item"><strong>CV MAE:</strong> ₹24.34 ± 1.51 Lakhs</div>
+            <div class="sidebar-card-item"><strong>Trees:</strong> 300 estimators (depth=6)</div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Geospatial Intelligence Card
+    st.markdown(
         """
+        <div class="sidebar-card">
+            <div class="sidebar-card-title">🗺️ Geospatial Intelligence</div>
+            <div class="sidebar-card-item"><strong>Recognized Localities:</strong> 234</div>
+            <div class="sidebar-card-item"><strong>Geocoded Centroids:</strong> 211 (90.2%)</div>
+            <div class="sidebar-card-item"><strong>Metro Stations:</strong> 481 nodes</div>
+            <div class="sidebar-card-item"><strong>Tech Parks:</strong> 130 hubs</div>
+            <div class="sidebar-card-item"><strong>Hospitals:</strong> 1,161 centers</div>
+            <div class="sidebar-card-item"><strong>Geodesic Engine:</strong> WGS84 Ellipsoid</div>
+        </div>
+        """,
+        unsafe_allow_html=True
     )
-    
-    st.divider()
 
-    # Sidebar Controls (Placeholder for user inputs)
-    st.sidebar.header("📍 Property Details")
-    location = st.sidebar.selectbox(
-        "Location in Bengaluru",
-        options=["Whitefield", "Electronic City", "Indiranagar", "HSR Layout", "Koramangala", "Hebbal"]
+    # Explainability Card
+    st.markdown(
+        """
+        <div class="sidebar-card">
+            <div class="sidebar-card-title">🔍 Explainable AI (SHAP)</div>
+            <div class="sidebar-card-item"><strong>Method:</strong> TreeSHAP (Cooperative Game Theory)</div>
+            <div class="sidebar-card-item"><strong>Base Value:</strong> 4.3578 log units (₹77.08L)</div>
+            <div class="sidebar-card-item"><strong>Additivity Discrepancy:</strong> &le; 5.25e-06</div>
+            <div class="sidebar-card-item"><strong>Top Predictor:</strong> total_sqft (|SHAP| = 0.381)</div>
+        </div>
+        """,
+        unsafe_allow_html=True
     )
-    bhk = st.sidebar.slider("Number of Bedrooms (BHK)", min_value=1, max_value=6, value=2)
-    bathrooms = st.sidebar.slider("Number of Bathrooms", min_value=1, max_value=6, value=2)
-    total_sqft = st.sidebar.number_input("Total Area (sq. ft.)", min_value=300, max_value=10000, value=1200, step=50)
 
-    # Main Area Layout
-    col1, col2 = st.columns([1, 1])
+    st.markdown("---")
+    st.caption("Developed as an institutional-grade tabular ML & geospatial intelligence system.")
 
-    with col1:
-        st.subheader("💡 Valuation Estimator")
-        st.info("Model pipeline will be connected here once training is completed.")
-        
-        if st.button("Estimate Valuation", type="primary"):
-            st.warning("Prediction engine under initialization. Complete the model training step first!")
 
-    with col2:
-        st.subheader("🗺️ Geospatial & Investment Intelligence")
-        st.info("Interactive maps and POI infrastructure density (metro, tech parks, schools) will appear here.")
+# MAIN CONTENT AREA
+st.markdown('<div class="main-header">EstateIQ AI — Bengaluru Real Estate Intelligence</div>', unsafe_allow_html=True)
+st.markdown(
+    '<div class="sub-header">AI-Powered Valuation Engine, OpenStreetMap Geospatial Proximities, and Explainable AI (SHAP)</div>',
+    unsafe_allow_html=True
+)
 
-    st.divider()
-    st.caption("EstateIQ AI Platform • Version 0.1.0 • Built with Python & Streamlit")
+# Main Navigation Tabs
+tab_val, tab_shap, tab_tourn, tab_cat = st.tabs([
+    "🏡 Property Valuation & Spatial Explorer",
+    "🔍 Explainable AI (SHAP)",
+    "📊 Model Benchmarks & Residual Tiers",
+    "🗺️ Locality Proximity Catalog"
+])
 
-if __name__ == "__main__":
-    main()
+# TAB 1: VALUATION & SPATIAL EXPLORER
+with tab_val:
+    inputs, prediction = render_valuation_calculator()
+    st.markdown("---")
+    render_geospatial_explorer(inputs["location"])
 
+# TAB 2: EXPLAINABLE AI (SHAP)
+with tab_shap:
+    render_shap_explainer_view()
+
+# TAB 3: MODEL TOURNAMENT & BENCHMARKS
+with tab_tourn:
+    render_market_insights()
+
+# TAB 4: LOCALITY PROXIMITY CATALOG
+with tab_cat:
+    render_locality_catalog()
+
+# APPLICATION FOOTER
+st.markdown("---")
+st.markdown(
+    """
+    <div style="text-align: center; color: #64748b; font-size: 0.85rem; padding: 10px 0;">
+        <strong>EstateIQ AI Platform</strong> • Built with Python, Streamlit, XGBoost, PyDeck & GeoPy.<br/>
+        Spatial data © <a href="https://www.openstreetmap.org/copyright" target="_blank" style="color: #475569;">OpenStreetMap contributors</a> (ODbL 1.0).<br/>
+        <em>Academic & Portfolio Demonstrator: Valuations represent statistical models of historical market transactions and should not replace certified professional real-estate appraisals.</em>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
