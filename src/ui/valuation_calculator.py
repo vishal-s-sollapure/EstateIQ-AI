@@ -27,7 +27,7 @@ def render_valuation_calculator() -> Tuple[Dict[str, Any], Dict[str, Any]]:
     st.markdown(
         "Enter property specifications below to generate an institutional-grade fair market "
         "valuation backed by the **Phase 5 Champion XGBoost model** ($R^2 = 0.7667$). "
-        "Valuations are trained on 11,252 verified Bengaluru transactions."
+        "Valuations are trained on 11,252 verified Bengaluru property listings / asking prices."
     )
 
     # Preset configurations for quick testing

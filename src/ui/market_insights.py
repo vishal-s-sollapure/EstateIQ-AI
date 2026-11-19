@@ -89,7 +89,7 @@ def render_market_insights():
     with t_tab3:
         st.markdown("### 📈 Bengaluru Housing Market Distributions (Phase 3 EDA)")
         st.markdown(
-            "Foundational statistical patterns extracted from the 11,252 cleaned residential transactions:"
+            "Foundational statistical patterns extracted from the 11,252 cleaned residential property listings:"
         )
 
         eda_cols = st.columns(3)

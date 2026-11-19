@@ -180,7 +180,7 @@ st.markdown(
     <div style="text-align: center; color: #64748b; font-size: 0.85rem; padding: 10px 0;">
         <strong>EstateIQ AI Platform</strong> • Built with Python, Streamlit, XGBoost, PyDeck & GeoPy.<br/>
         Spatial data © <a href="https://www.openstreetmap.org/copyright" target="_blank" style="color: #475569;">OpenStreetMap contributors</a> (ODbL 1.0).<br/>
-        <em>Academic & Portfolio Demonstrator: Valuations represent statistical models of historical market transactions and should not replace certified professional real-estate appraisals.</em>
+        <em>Academic & Portfolio Demonstrator: Valuations represent statistical models of historical property listings / asking prices and should not replace certified professional real-estate appraisals.</em>
     </div>
     """,
     unsafe_allow_html=True
