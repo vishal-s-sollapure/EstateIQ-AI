@@ -61,7 +61,7 @@ Streamlit Community Cloud is 100% free, connects directly to your GitHub reposit
      2. Install packages from `requirements.txt`.
      3. Apply settings from `.streamlit/config.toml`.
      4. Launch the application.
-   - **Expected Build Time:** ~60 to 90 seconds.
+   - **Build Duration:** Deployment build times vary depending on cloud container provisioning, wheel installation, network speed, and platform queue load.
 
 6. **Post-Deployment Verification:**
    - Verify the 4 presets in Tab 1 (Hoodi 2BHK, Whitefield 3BHK, Indiranagar 4BHK, E-City 2BHK).
