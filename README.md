@@ -17,7 +17,7 @@
 **EstateIQ AI** is an institutional-grade machine learning and geospatial intelligence platform engineered to predict residential property valuations and deliver transparent investment analytics across metropolitan **Bengaluru, India** ("Silicon Valley of India").
 
 Rather than relying on black-box heuristics or broker markups, EstateIQ AI synthesizes:
-1. **Advanced Gradient Boosting**: Tournament-winning **XGBoost (Log-Target)** pipeline achieving **Test $R^2 = 0.7667$** and **Test MAE = ₹25.13 Lakhs** across 11,252 historical transactions.
+1. **Advanced Gradient Boosting**: Tournament-winning **XGBoost (Log-Target)** pipeline achieving **Test $R^2 = 0.7667$** and **Test MAE = ₹25.13 Lakhs** across 11,252 historical property listings / asking prices.
 2. **OpenStreetMap Geospatial Intelligence**: Live geodesic proximity modeling to 481 transit/metro nodes, 130 technology parks, and 1,161 healthcare centers across 234 Bengaluru localities.
 3. **Explainable AI (TreeSHAP)**: Provably exact Shapley additive attributions in model log-margin space ($\log(1+y)$), explaining the exact economic drivers behind every valuation.
 4. **Interactive Cartographic Dashboard**: A high-performance **Streamlit & PyDeck** web application supporting sub-25ms inference, interactive 2D/3D micro-market maps, preset appraisals, and historical residual-scale estimates.
@@ -173,7 +173,11 @@ source venv/bin/activate
 
 ### 3. Install Dependencies
 ```bash
+# Production dependencies (for application & inference)
 python -m pip install -r requirements.txt
+
+# Optional development & notebook dependencies (Jupyter, ipykernel)
+python -m pip install -r requirements-dev.txt
 ```
 
 ### 4. Run Automated Regression Test Suite
@@ -213,4 +217,4 @@ web: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.
 
 - **Developer**: Second-Year CSE (AI & Machine Learning) Student.
 - **Domain Focus**: Production Tabular ML, Geospatial Data Engineering, Explainable AI (XAI), DevSecOps.
-- **License**: MIT License. Real estate appraisals reflect statistical models of historical market transactions and should not replace certified professional appraisals.
+- **License**: MIT License. Real estate appraisals reflect statistical models of historical property listings / asking prices and should not replace certified professional appraisals.

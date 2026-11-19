@@ -37,7 +37,7 @@ def render_shap_explainer_view():
         
         - **Base Value ($E[\\log(1+y)]$):** **4.3578** (Translates to $\\exp(4.3578) - 1 \\approx$ **₹77.08 Lakhs** baseline market anchor).
         - **$\\phi_i(x)$:** Marginal Shapley additive contribution of feature $i$ in log-price space.
-        - **Additivity Verification:** Max numerical discrepancy across all 2,251 test listings is **5.25e-06**, confirming mathematical precision.
+        - **Additivity Verification:** Max numerical discrepancy across all 2,251 test listings is **8.58e-06 log units** (Native TreeSHAP), confirming mathematical precision.
         """
     )
 
