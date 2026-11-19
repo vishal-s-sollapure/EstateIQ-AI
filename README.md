@@ -1,7 +1,7 @@
 # EstateIQ AI 🏢
 ### AI-Powered Bengaluru Real Estate Valuation & Investment Intelligence Platform
 
-[![Live Demo](https://img.shields.io/badge/Streamlit_App-Live_Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://estateiq-ai.streamlit.app/)
+[![Live Demo](https://img.shields.io/badge/Streamlit_App-Live_Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://estateiq-ai-kddcxbmxa2hk4qkmxzyhmq.streamlit.app/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-EstateIQ--AI-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/vishal-s-sollapure/EstateIQ-AI)
 
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
@@ -18,7 +18,7 @@
 ## 🌐 Live Web Application
 
 The interactive web platform is deployed and publicly accessible on Streamlit Community Cloud:
-👉 **[estateiq-ai.streamlit.app](https://estateiq-ai.streamlit.app/)**
+👉 **[estateiq-ai-kddcxbmxa2hk4qkmxzyhmq.streamlit.app](https://estateiq-ai-kddcxbmxa2hk4qkmxzyhmq.streamlit.app/)**
 
 *Runs 100% air-gapped during inference with zero external API dependencies, sub-25ms prediction latency, and interactive 2D/3D geospatial visualization.*
 

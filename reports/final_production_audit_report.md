@@ -5,7 +5,8 @@
 **Evaluator:** Senior ML Systems Architect & Production Readiness Reviewer  
 **Audit Date:** November 2026  
 **Environment:** Python 3.12.10 (AMD64, Windows 11 / Streamlit Cloud Linux target)  
-**Status:** ✅ **APPROVED FOR LIVE CLOUD DEPLOYMENT**
+**Status:** ✅ **APPROVED & DEPLOYED TO CLOUD**  
+**Live Production URL:** [https://estateiq-ai-kddcxbmxa2hk4qkmxzyhmq.streamlit.app/](https://estateiq-ai-kddcxbmxa2hk4qkmxzyhmq.streamlit.app/)
 
 ---
 

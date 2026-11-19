@@ -49,10 +49,12 @@ Streamlit Community Cloud is 100% free, connects directly to your GitHub reposit
      - `estateiq-ai` $\to$ Resulting URL: `https://estateiq-ai.streamlit.app`
      - *(If already taken, try `estateiq-bengaluru` or `estateiq-valuation`)*.
 
-4. **Advanced Settings (Optional):**
-   - Click **"Advanced settings"**.
-   - Under **Python version**, select **3.12** (or **3.11**).
-   - Under **Secrets**, leave empty (EstateIQ AI runs 100% air-gapped during inference and requires zero external API keys).
+4. **Deployment Status & Verified Live URL:**
+   - **Production URL:** **`https://estateiq-ai-kddcxbmxa2hk4qkmxzyhmq.streamlit.app/`**
+   - **Repository:** `vishal-s-sollapure/EstateIQ-AI`
+   - **Branch:** `main`
+   - **Entrypoint:** `app.py`
+   - **Status:** 🟢 **Live & Operational**
 
 5. **Deploy:**
    - Click **"Deploy!"** 🚀.
