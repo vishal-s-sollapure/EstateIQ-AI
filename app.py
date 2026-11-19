@@ -1,5 +1,5 @@
 """
-EstateIQ AI - Phase 6.3: Main Streamlit Application
+EstateIQ AI - Phase 6.5: Main Streamlit Application
 ---------------------------------------------------
 AI-Powered Bengaluru Real Estate Valuation & Investment Intelligence Platform
 Integrating XGBoost (Log-Target), OpenStreetMap Geospatial Intelligence,
@@ -85,7 +85,7 @@ st.markdown(
 with st.sidebar:
     st.markdown("## 🏢 EstateIQ AI")
     st.markdown("*Bengaluru Property Valuation & Geospatial Intelligence*")
-    st.markdown('<span class="badge-champion">Phase 6.3 • Production Grade</span>', unsafe_allow_html=True)
+    st.markdown('<span class="badge-champion">Phase 6.5 • Production Ready</span>', unsafe_allow_html=True)
 
     st.markdown("---")
 
@@ -129,7 +129,7 @@ with st.sidebar:
             <div class="sidebar-card-title">🔍 Explainable AI (SHAP)</div>
             <div class="sidebar-card-item"><strong>Method:</strong> TreeSHAP (Cooperative Game Theory)</div>
             <div class="sidebar-card-item"><strong>Base Value:</strong> 4.3578 log units (₹77.08L)</div>
-            <div class="sidebar-card-item"><strong>Additivity Discrepancy:</strong> &le; 5.25e-06</div>
+            <div class="sidebar-card-item"><strong>Additivity Discrepancy:</strong> &le; 8.58e-06 log units</div>
             <div class="sidebar-card-item"><strong>Top Predictor:</strong> total_sqft (|SHAP| = 0.381)</div>
         </div>
         """,
